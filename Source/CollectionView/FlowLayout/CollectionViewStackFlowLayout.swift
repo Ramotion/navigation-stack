@@ -13,9 +13,11 @@ import UIKit
 class CollectionViewStackFlowLayout: UICollectionViewFlowLayout {
   
   let itemsCount: Int
+  let overlay: Float
   
-  init(itemsCount: Int) {
+  init(itemsCount: Int, overlay: Float) {
     self.itemsCount = itemsCount
+    self.overlay    = overlay
     super.init()
   }
 
@@ -49,36 +51,51 @@ extension CollectionViewStackFlowLayout {
     guard let collectionView = self.collectionView else {
       return;
     }
-    
-    let itemWidth = collectionView.bounds.size.width - collectionView.bounds.size.width * 0.2 // hack
-    
-    let maxScale = 0.8 - CGFloat(itemsCount - attributes.indexPath.row) / 50.0
-    let minScale = 0.7 - CGFloat(itemsCount - attributes.indexPath.row) / 50.0
-    
+    let itemWidth = collectionView.bounds.size.width - collectionView.bounds.size.width * CGFloat(overlay)
     let allWidth = itemWidth * CGFloat(itemsCount - 1)
     
-    // scale
-    var currentScale = (maxScale + minScale) - (minScale + collectionView.contentOffset.x / (allWidth / (maxScale - minScale)))
-    currentScale = currentScale > maxScale ? maxScale : currentScale
-    currentScale = currentScale < minScale ? minScale : currentScale
+    // set contentOffset range
+    let contentOffsetX = min(max(0, collectionView.contentOffset.x), allWidth)
     
-    attributes.transform = CGAffineTransformMakeScale(currentScale, currentScale)
-    attributes.zIndex = attributes.indexPath.row
-    //
-//
-//    
-    if attributes.indexPath.row == 0 {
-//      attributes.frame = CGRect(origin: CGPoint(x: attributes.bounds.origin.x + collectionView.contentOffset.x / 4.0, y: attributes.frame.origin.y),
-//                                size: attributes.frame.size)
-//      attributes.center = CGPoint(x: attributes.bounds.origin.x + collectionView.contentOffset.x / 4.0, y: attributes.center.y)
-//      print(attributes.frame)
-//      attributes.frame = CGRect(x: attributes.bounds.origin.x + collectionView.contentOffset.x / 4.0,
-//        y: attributes.frame.origin.y, width: attributes.frame.size.width, height: attributes.frame.size.height)
-//      print(attributes.frame)
-    }
+    let scale = transformScale(attributes, allWidth: allWidth, offset: contentOffsetX)
+    let move  = transformMove(attributes, itemWidth: itemWidth, offset: contentOffsetX)
+    attributes.transform = CGAffineTransformConcat(scale, move)
+
+    attributes.zIndex    = attributes.indexPath.row
   }
   
   override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
     return true
   }
+}
+
+// MARK: helpers
+
+extension CollectionViewStackFlowLayout {
+
+  private func transformScale(attributes: UICollectionViewLayoutAttributes, allWidth: CGFloat, offset: CGFloat) -> CGAffineTransform {
+    let maxScale = 0.8 - CGFloat(itemsCount - attributes.indexPath.row) / 50.0
+    let minScale = 0.7 - CGFloat(itemsCount - attributes.indexPath.row) / 50.0
+    
+    var currentScale = (maxScale + minScale) - (minScale + offset / (allWidth / (maxScale - minScale)))
+    currentScale = max(min(maxScale, currentScale), minScale)
+    return CGAffineTransformMakeScale(currentScale, currentScale)
+  }
+  
+  private func transformMove(attributes: UICollectionViewLayoutAttributes, itemWidth: CGFloat, offset: CGFloat) -> CGAffineTransform {
+    var currentContentOffsetX = offset - itemWidth * CGFloat(attributes.indexPath.row)
+    currentContentOffsetX = min(max(currentContentOffsetX, 0),itemWidth)
+    
+    var dx = (currentContentOffsetX / itemWidth)
+    if dx == 1 {
+      attributes.hidden = true
+    } else {
+      attributes.hidden = false
+    }
+    
+    dx = pow(dx,2) * 150
+    return CGAffineTransformMakeTranslation(dx, 0)
+  }
+
+
 }

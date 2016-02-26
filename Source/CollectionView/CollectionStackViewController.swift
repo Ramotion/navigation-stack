@@ -18,13 +18,15 @@ protocol CollectionStackViewControllerDelegate {
 class CollectionStackViewController: UICollectionViewController {
 
   private var screens: [UIImage]
+  private let overlay: Float
   
   let delegate: CollectionStackViewControllerDelegate
   
-  init(images: [UIImage], delegate: CollectionStackViewControllerDelegate) {
-    screens = images
+  init(images: [UIImage], delegate: CollectionStackViewControllerDelegate, overlay: Float = 0.6) {
+    self.screens  = images
     self.delegate = delegate
-    super.init(collectionViewLayout: CollectionViewStackFlowLayout(itemsCount: images.count))
+    self.overlay  = overlay
+    super.init(collectionViewLayout: CollectionViewStackFlowLayout(itemsCount: images.count, overlay: overlay))
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -95,7 +97,7 @@ extension CollectionStackViewController: UICollectionViewDelegateFlowLayout {
   }
   
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: NSInteger) -> CGFloat {
-    return -collectionView.bounds.size.width * 0.2
+    return -collectionView.bounds.size.width * CGFloat(overlay)
   }
 }
 

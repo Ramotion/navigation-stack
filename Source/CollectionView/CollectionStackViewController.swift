@@ -35,11 +35,17 @@ class CollectionStackViewController: UICollectionViewController {
   
   override func viewDidLoad() {
     configureCollectionView()
-//    scrolltoIndex(screens.count - 1, animated: false, position: .Left) // move to end
+    scrolltoIndex(screens.count - 1, animated: false, position: .Left) // move to end
   }
   
   override func viewDidAppear(animated: Bool) {
-//    scrolltoIndex(0, animated: true, position: .Right) // open animation
+    
+    guard let collectionViewLayout = self.collectionViewLayout as? CollectionViewStackFlowLayout else {
+      fatalError("wrong collection layout")
+    }
+    
+    collectionViewLayout.openAnimating = true
+    scrolltoIndex(0, animated: true, position: .Left) // open animation
   }
 }
 

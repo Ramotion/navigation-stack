@@ -90,7 +90,22 @@ extension CollectionStackViewController {
   
   override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     delegate.controllerDidSelected(index: indexPath.row)
-    dismissViewControllerAnimated(true, completion: nil)
+    
+    let currentCell = collectionView.cellForItemAtIndexPath(indexPath)
+    
+    UIView.animateWithDuration(0.3, animations: { () -> Void in
+      let scale = CGAffineTransformMakeScale(1, 1)
+      let offset = collectionView.contentOffset.x - (self.view.bounds.size.width - collectionView.bounds.size.width * CGFloat(self.overlay)) * CGFloat(indexPath.row)
+      let move = CGAffineTransformMakeTranslation(offset , 0)
+      currentCell?.transform = CGAffineTransformConcat(scale, move)
+      
+      for  cell in self.collectionView!.visibleCells() where cell != currentCell {
+        cell.transform = CGAffineTransformMakeTranslation(self.view.bounds.size.width , 0)
+      }
+      
+    }) { (success) -> Void in
+      self.dismissViewControllerAnimated(false, completion: nil)
+    }
   }
 }
 

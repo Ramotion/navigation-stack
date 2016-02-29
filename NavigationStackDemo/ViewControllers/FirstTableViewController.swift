@@ -1,5 +1,5 @@
 //
-//  TableViewController.swift
+//  FirstTableViewController.swift
 //  NavigationStackDemo
 //
 //  Created by Alex K. on 29/02/16.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-// MARK: TableViewController
+// MARK: FirstTableViewController
 
-class TableViewController: UITableViewController {
+class FirstTableViewController: UITableViewController {
   
   let items = [
     UIColor(red:0.97, green:0.74, blue:0.58, alpha:1),
@@ -20,8 +20,8 @@ class TableViewController: UITableViewController {
     UIColor(red:0.77, green:0.76, blue:0.92, alpha:1)
   ]
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
     
     if let navigationController = navigationController {
       navigationController.navigationBar.barTintColor = UIColor(red:0.93, green:0.93, blue:0.95, alpha:1)
@@ -32,7 +32,7 @@ class TableViewController: UITableViewController {
 
 // MARK: UITableViewDataSource
 
-extension TableViewController {
+extension FirstTableViewController {
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return items.count
@@ -45,7 +45,7 @@ extension TableViewController {
 
 // MARK: UITableViewDelegate
 
-extension TableViewController {
+extension FirstTableViewController {
   override func tableView(tableView: UITableView, willDisplayCell
     cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
       

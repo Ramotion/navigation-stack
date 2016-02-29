@@ -365,6 +365,11 @@
                                 <action selector="backHandler:" destination="Y7k-xx-h5q" id="smv-wd-MTx"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="R34-E4-1Co">
+                            <connections>
+                                <action selector="showHandler:" destination="Y7k-xx-h5q" id="52J-EY-Xbt"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6v-A6-DcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -912,6 +917,11 @@
                         <barButtonItem key="leftBarButtonItem" image="back" id="3or-01-oV6">
                             <connections>
                                 <action selector="backHandler:" destination="iaH-ZQ-ay5" id="DZv-HC-MAX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="UI5-M5-e96">
+                            <connections>
+                                <action selector="showHandler:" destination="iaH-ZQ-ay5" id="7Qd-33-wnX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1623,6 +1633,11 @@
                                 <action selector="backHandler:" destination="nzl-xt-jfq" id="5p0-sR-YpK"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="qKm-c4-2Wz">
+                            <connections>
+                                <action selector="showHandler:" destination="nzl-xt-jfq" id="S9E-sm-OqJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -2174,6 +2189,11 @@
                         <barButtonItem key="leftBarButtonItem" image="back" id="OAc-d7-aUh">
                             <connections>
                                 <action selector="backHandler:" destination="vgN-Iu-4mR" id="oAG-8U-UYd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="p9N-Im-l7z">
+                            <connections>
+                                <action selector="showHandler:" destination="vgN-Iu-4mR" id="HZw-qB-Gsz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

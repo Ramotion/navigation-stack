@@ -13,5 +13,15 @@ class FifthViewController: UITableViewController {
   @IBAction func backHandler(sender: AnyObject) {
     navigationController?.popViewControllerAnimated(true)
   }
+  
+  @IBAction func showHandler(sender: AnyObject) {
+    
+    guard let navigationController = navigationController as? NavigationStack else {
+      return
+    }
+    
+    navigationController.showControllers()
+    
+  }
 
 }

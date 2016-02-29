@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8444B0F01C80238500B53B4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B0EF1C80238500B53B4E /* AppDelegate.swift */; };
-		8444B0F21C80238500B53B4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B0F11C80238500B53B4E /* ViewController.swift */; };
 		8444B0F51C80238500B53B4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8444B0F31C80238500B53B4E /* Main.storyboard */; };
 		8444B0F71C80238500B53B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8444B0F61C80238500B53B4E /* Assets.xcassets */; };
 		8444B0FA1C80238500B53B4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8444B0F81C80238500B53B4E /* LaunchScreen.storyboard */; };
@@ -21,21 +20,11 @@
 		847B0F871C842ED800E2C54D /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F861C842ED800E2C54D /* FirstTableViewController.swift */; };
 		847B0F881C842ED800E2C54D /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F861C842ED800E2C54D /* FirstTableViewController.swift */; };
 		847B0F891C842ED800E2C54D /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F861C842ED800E2C54D /* FirstTableViewController.swift */; };
-		847B0F8C1C8430E900E2C54D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F8B1C8430E900E2C54D /* TableViewCell.swift */; };
-		847B0F8D1C8430E900E2C54D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F8B1C8430E900E2C54D /* TableViewCell.swift */; };
-		847B0F8E1C8430E900E2C54D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F8B1C8430E900E2C54D /* TableViewCell.swift */; };
-		847B0F971C8461C000E2C54D /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F961C8461C000E2C54D /* ThirdViewController.swift */; };
-		847B0F981C8461C000E2C54D /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F961C8461C000E2C54D /* ThirdViewController.swift */; };
-		847B0F991C8461C000E2C54D /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F961C8461C000E2C54D /* ThirdViewController.swift */; };
-		847B0F9B1C84622000E2C54D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F9A1C84622000E2C54D /* SecondViewController.swift */; };
-		847B0F9C1C84622000E2C54D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F9A1C84622000E2C54D /* SecondViewController.swift */; };
-		847B0F9D1C84622000E2C54D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F9A1C84622000E2C54D /* SecondViewController.swift */; };
-		847B0FA01C8465E600E2C54D /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F9F1C8465E600E2C54D /* FourthViewController.swift */; };
-		847B0FA11C8465E600E2C54D /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F9F1C8465E600E2C54D /* FourthViewController.swift */; };
-		847B0FA21C8465E600E2C54D /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F9F1C8465E600E2C54D /* FourthViewController.swift */; };
-		847B0FA51C84692900E2C54D /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FA41C84692900E2C54D /* FifthViewController.swift */; };
-		847B0FA61C84692900E2C54D /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FA41C84692900E2C54D /* FifthViewController.swift */; };
-		847B0FA71C84692900E2C54D /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FA41C84692900E2C54D /* FifthViewController.swift */; };
+		847B0FA91C846B8100E2C54D /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FA81C846B8100E2C54D /* FifthViewController.swift */; };
+		847B0FAB1C846B8C00E2C54D /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FAA1C846B8C00E2C54D /* FourthViewController.swift */; };
+		847B0FAD1C846B9200E2C54D /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FAC1C846B9200E2C54D /* ThirdViewController.swift */; };
+		847B0FAF1C846BD600E2C54D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FAE1C846BD600E2C54D /* TableViewCell.swift */; };
+		847B0FB11C846C6100E2C54D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FB01C846C6100E2C54D /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +47,6 @@
 /* Begin PBXFileReference section */
 		8444B0EC1C80238500B53B4E /* NavigationStackDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationStackDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8444B0EF1C80238500B53B4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8444B0F11C80238500B53B4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8444B0F41C80238500B53B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8444B0F61C80238500B53B4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8444B0F91C80238500B53B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,11 +62,11 @@
 		8444B1231C80250A00B53B4E /* CollectionStackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionStackViewController.swift; sourceTree = "<group>"; };
 		8444B1261C80250A00B53B4E /* NavigationStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
 		847B0F861C842ED800E2C54D /* FirstTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstTableViewController.swift; path = ../FirstTableViewController.swift; sourceTree = "<group>"; };
-		847B0F8B1C8430E900E2C54D /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		847B0F961C8461C000E2C54D /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		847B0F9A1C84622000E2C54D /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		847B0F9F1C8465E600E2C54D /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		847B0FA41C84692900E2C54D /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		847B0FA81C846B8100E2C54D /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		847B0FAA1C846B8C00E2C54D /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		847B0FAC1C846B9200E2C54D /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		847B0FAE1C846BD600E2C54D /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		847B0FB01C846C6100E2C54D /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +120,6 @@
 				847B0F851C842EAD00E2C54D /* ViewControllers */,
 				8444B11D1C80247500B53B4E /* Source */,
 				8444B0EF1C80238500B53B4E /* AppDelegate.swift */,
-				8444B0F11C80238500B53B4E /* ViewController.swift */,
 				8444B0F31C80238500B53B4E /* Main.storyboard */,
 				8444B0F61C80238500B53B4E /* Assets.xcassets */,
 				8444B0F81C80238500B53B4E /* LaunchScreen.storyboard */,
@@ -198,11 +185,11 @@
 		847B0F851C842EAD00E2C54D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				847B0FA31C84690E00E2C54D /* FifthViewController */,
-				847B0F9E1C8464F100E2C54D /* FourthViewController */,
-				847B0F951C84618300E2C54D /* ThirdViewController */,
 				847B0F8F1C844B4F00E2C54D /* FirstViewController */,
 				847B0F901C844BBC00E2C54D /* SecondViewController */,
+				847B0F951C84618300E2C54D /* ThirdViewController */,
+				847B0F9E1C8464F100E2C54D /* FourthViewController */,
+				847B0FA31C84690E00E2C54D /* FifthViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -210,7 +197,7 @@
 		847B0F8A1C8430C100E2C54D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				847B0F8B1C8430E900E2C54D /* TableViewCell.swift */,
+				847B0FAE1C846BD600E2C54D /* TableViewCell.swift */,
 			);
 			name = Cells;
 			path = ../Cells;
@@ -228,7 +215,7 @@
 		847B0F901C844BBC00E2C54D /* SecondViewController */ = {
 			isa = PBXGroup;
 			children = (
-				847B0F9A1C84622000E2C54D /* SecondViewController.swift */,
+				847B0FB01C846C6100E2C54D /* SecondViewController.swift */,
 			);
 			path = SecondViewController;
 			sourceTree = "<group>";
@@ -236,7 +223,7 @@
 		847B0F951C84618300E2C54D /* ThirdViewController */ = {
 			isa = PBXGroup;
 			children = (
-				847B0F961C8461C000E2C54D /* ThirdViewController.swift */,
+				847B0FAC1C846B9200E2C54D /* ThirdViewController.swift */,
 			);
 			path = ThirdViewController;
 			sourceTree = "<group>";
@@ -244,7 +231,7 @@
 		847B0F9E1C8464F100E2C54D /* FourthViewController */ = {
 			isa = PBXGroup;
 			children = (
-				847B0F9F1C8465E600E2C54D /* FourthViewController.swift */,
+				847B0FAA1C846B8C00E2C54D /* FourthViewController.swift */,
 			);
 			path = FourthViewController;
 			sourceTree = "<group>";
@@ -252,7 +239,7 @@
 		847B0FA31C84690E00E2C54D /* FifthViewController */ = {
 			isa = PBXGroup;
 			children = (
-				847B0FA41C84692900E2C54D /* FifthViewController.swift */,
+				847B0FA81C846B8100E2C54D /* FifthViewController.swift */,
 			);
 			path = FifthViewController;
 			sourceTree = "<group>";
@@ -388,16 +375,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				847B0FA51C84692900E2C54D /* FifthViewController.swift in Sources */,
-				847B0F9B1C84622000E2C54D /* SecondViewController.swift in Sources */,
+				847B0FB11C846C6100E2C54D /* SecondViewController.swift in Sources */,
+				847B0FA91C846B8100E2C54D /* FifthViewController.swift in Sources */,
 				8444B1271C80250A00B53B4E /* CollectionViewStackCell.swift in Sources */,
-				847B0FA01C8465E600E2C54D /* FourthViewController.swift in Sources */,
-				847B0F8C1C8430E900E2C54D /* TableViewCell.swift in Sources */,
-				847B0F971C8461C000E2C54D /* ThirdViewController.swift in Sources */,
 				847B0F871C842ED800E2C54D /* FirstTableViewController.swift in Sources */,
-				8444B0F21C80238500B53B4E /* ViewController.swift in Sources */,
+				847B0FAB1C846B8C00E2C54D /* FourthViewController.swift in Sources */,
 				8444B1291C80250A00B53B4E /* CollectionStackViewController.swift in Sources */,
+				847B0FAF1C846BD600E2C54D /* TableViewCell.swift in Sources */,
 				8444B1281C80250A00B53B4E /* CollectionViewStackFlowLayout.swift in Sources */,
+				847B0FAD1C846B9200E2C54D /* ThirdViewController.swift in Sources */,
 				8444B12B1C80250A00B53B4E /* NavigationStack.swift in Sources */,
 				8444B0F01C80238500B53B4E /* AppDelegate.swift in Sources */,
 			);
@@ -407,13 +393,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				847B0FA11C8465E600E2C54D /* FourthViewController.swift in Sources */,
-				847B0F9C1C84622000E2C54D /* SecondViewController.swift in Sources */,
-				847B0F8D1C8430E900E2C54D /* TableViewCell.swift in Sources */,
-				847B0F981C8461C000E2C54D /* ThirdViewController.swift in Sources */,
 				8444B1051C80238500B53B4E /* NavigationStackDemoTests.swift in Sources */,
 				847B0F881C842ED800E2C54D /* FirstTableViewController.swift in Sources */,
-				847B0FA61C84692900E2C54D /* FifthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,13 +402,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				847B0FA21C8465E600E2C54D /* FourthViewController.swift in Sources */,
-				847B0F9D1C84622000E2C54D /* SecondViewController.swift in Sources */,
-				847B0F8E1C8430E900E2C54D /* TableViewCell.swift in Sources */,
-				847B0F991C8461C000E2C54D /* ThirdViewController.swift in Sources */,
 				8444B1101C80238500B53B4E /* NavigationStackDemoUITests.swift in Sources */,
 				847B0F891C842ED800E2C54D /* FirstTableViewController.swift in Sources */,
-				847B0FA71C84692900E2C54D /* FifthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

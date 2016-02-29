@@ -23,6 +23,16 @@ class SecondViewController: UITableViewController {
     navigationController?.popViewControllerAnimated(true)
   }
   
+  @IBAction func showHandler(sender: AnyObject) {
+    
+    guard let navigationController = navigationController as? NavigationStack else {
+      return
+    }
+    
+    navigationController.showControllers()
+    
+  }
+  
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     performSegueWithIdentifier("push", sender: nil)
   }

@@ -21,6 +21,8 @@ class CollectionViewStackFlowLayout: UICollectionViewFlowLayout {
   var additionScale = 1.0
   var openAnimating = false
   
+  var dxOffset: Float = 0
+  
   init(itemsCount: Int, overlay: Float, scaleRatio: Float, scale: Float) {
     self.itemsCount = itemsCount
     self.overlay    = overlay
@@ -100,13 +102,26 @@ extension CollectionViewStackFlowLayout {
     currentContentOffsetX = min(max(currentContentOffsetX, 0),itemWidth)
     
     var dx = (currentContentOffsetX / itemWidth)
-    if dx == 1 {
-      attributes.hidden = true
-    } else {
-      attributes.hidden = false
+    if attributes.indexPath.row == 0 {
+     print("dx : \(dx) offset: \(currentContentOffsetX)")
     }
+  
+    attributes.alpha = 1 - dx
+//    dx = (1 - dx) * 30
     
-    dx = pow(dx,2) * 90
+//    if dx == 1 {
+//      attributes.hidden = true
+//    } else {
+//      attributes.hidden = false
+//    }
+//    
+//    dx = pow(dx,2) * 170
+    dx *= 50.0
+    
+//    if attributes.indexPath.row == 0 {
+//      dx = (dx * 2) >= currentContentOffsetX ? currentContentOffsetX - 30 : dx
+      dx = currentContentOffsetX - dx
+//    }
     return CGAffineTransformMakeTranslation(dx, 0)
   }
 

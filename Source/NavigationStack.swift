@@ -12,7 +12,7 @@ import UIKit
 
 public class NavigationStack: UINavigationController {
   
-  @IBInspectable var overlay: Float = 0.7
+  @IBInspectable var overlay: Float = 0.8
   @IBInspectable var scaleRatio: Float = 14.0
   @IBInspectable var scaleValue: Float = 0.99
   

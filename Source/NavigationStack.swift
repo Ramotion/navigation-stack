@@ -13,8 +13,10 @@ import UIKit
 public class NavigationStack: UINavigationController {
   
   @IBInspectable var overlay: Float = 0.7
-  @IBInspectable var scaleRatio: Float = 10.0
+  @IBInspectable var scaleRatio: Float = 14.0
   @IBInspectable var scaleValue: Float = 0.99
+  
+  @IBInspectable var bgColor: UIColor = .blackColor()
   
   private var screens = [UIImage]()
   
@@ -35,11 +37,11 @@ extension NavigationStack {
       delegate: self,
       overlay: overlay,
       scaleRatio: scaleRatio,
-      scaleValue: scaleValue)
+      scaleValue: scaleValue,
+      bgColor: bgColor)
     
     presentViewController(collectioView, animated: false, completion: nil)
   }
-
 }
 
 // MARK: Additional helpers

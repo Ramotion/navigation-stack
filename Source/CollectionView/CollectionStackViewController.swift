@@ -25,14 +25,20 @@ class CollectionStackViewController: UICollectionViewController {
     delegate: CollectionStackViewControllerDelegate,
     overlay: Float,
     scaleRatio: Float,
-    scaleValue: Float) {
+    scaleValue: Float,
+    bgColor: UIColor) {
       
-    self.screens  = images
-    self.delegate = delegate
-    self.overlay  = overlay
+      self.screens  = images
+      self.delegate = delegate
+      self.overlay  = overlay
+        
+        
+      let layout = CollectionViewStackFlowLayout(itemsCount: images.count, overlay: overlay, scaleRatio: scaleRatio, scale:scaleValue)
+      super.init(collectionViewLayout: layout)
       
-    let layout = CollectionViewStackFlowLayout(itemsCount: images.count, overlay: overlay, scaleRatio: scaleRatio, scale:scaleValue)
-    super.init(collectionViewLayout: layout)
+      if let collectionView = self.collectionView {
+        collectionView.backgroundColor = bgColor
+      }
   }
 
   required init?(coder aDecoder: NSCoder) {

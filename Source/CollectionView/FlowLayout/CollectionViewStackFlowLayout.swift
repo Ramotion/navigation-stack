@@ -106,7 +106,7 @@ extension CollectionViewStackFlowLayout {
       attributes.hidden = false
     }
     
-    dx = pow(dx,2) * 150
+    dx = pow(dx,2) * 90
     return CGAffineTransformMakeTranslation(dx, 0)
   }
 

@@ -12,6 +12,10 @@ import UIKit
 
 public class NavigationStack: UINavigationController {
   
+  @IBInspectable var overlay: Float = 0.7
+  @IBInspectable var scaleRatio: Float = 10.0
+  @IBInspectable var scaleValue: Float = 0.99
+  
   private var screens = [UIImage]()
   
   public required init?(coder aDecoder: NSCoder) {
@@ -27,7 +31,12 @@ extension NavigationStack {
   public func showControllers() {
     var allScreens = screens
     allScreens.append(view.takeScreenshot())
-    let collectioView = CollectionStackViewController(images: allScreens, delegate: self)
+    let collectioView = CollectionStackViewController(images: allScreens,
+      delegate: self,
+      overlay: overlay,
+      scaleRatio: scaleRatio,
+      scaleValue: scaleValue)
+    
     presentViewController(collectioView, animated: false, completion: nil)
   }
 

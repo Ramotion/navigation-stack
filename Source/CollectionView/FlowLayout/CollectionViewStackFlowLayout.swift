@@ -15,15 +15,17 @@ class CollectionViewStackFlowLayout: UICollectionViewFlowLayout {
   let itemsCount: Int
   let overlay: Float // from 0 to 1
   
-  let maxScale = 0.8
-  let minScale = 0.7
+  let maxScale: Float
+  let scaleRatio: Float
   
   var additionScale = 1.0
   var openAnimating = false
   
-  init(itemsCount: Int, overlay: Float) {
+  init(itemsCount: Int, overlay: Float, scaleRatio: Float, scale: Float) {
     self.itemsCount = itemsCount
     self.overlay    = overlay
+    self.scaleRatio = scaleRatio
+    self.maxScale = scale
     super.init()
   }
 
@@ -83,11 +85,10 @@ extension CollectionViewStackFlowLayout {
 extension CollectionViewStackFlowLayout {
 
   private func transformScale(attributes: UICollectionViewLayoutAttributes, allWidth: CGFloat, offset: CGFloat) -> CGAffineTransform {
-    var maximum = CGFloat(maxScale) - CGFloat(itemsCount - attributes.indexPath.row) / 50.0
+    var maximum = CGFloat(maxScale) - CGFloat(itemsCount - attributes.indexPath.row) / CGFloat(scaleRatio)
     maximum += CGFloat(1.0 - maximum) * CGFloat(additionScale)
-    var minimum = CGFloat(minScale) - CGFloat(itemsCount - attributes.indexPath.row) / 50.0
+    var minimum = CGFloat(maxScale - 0.1) - CGFloat(itemsCount - attributes.indexPath.row) / CGFloat(scaleRatio)
     minimum += CGFloat(1.0 - minimum) * CGFloat(additionScale)
-    
     
     var currentScale = (maximum + minimum) - (minimum + offset / (allWidth / (maximum - minimum)))
     currentScale = max(min(maximum, currentScale), minimum)

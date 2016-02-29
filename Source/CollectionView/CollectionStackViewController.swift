@@ -16,17 +16,23 @@ protocol CollectionStackViewControllerDelegate {
 
 
 class CollectionStackViewController: UICollectionViewController {
-
   private var screens: [UIImage]
   private let overlay: Float
   
   let delegate: CollectionStackViewControllerDelegate
   
-  init(images: [UIImage], delegate: CollectionStackViewControllerDelegate, overlay: Float = 0.6) {
+  init(images: [UIImage],
+    delegate: CollectionStackViewControllerDelegate,
+    overlay: Float,
+    scaleRatio: Float,
+    scaleValue: Float) {
+      
     self.screens  = images
     self.delegate = delegate
     self.overlay  = overlay
-    super.init(collectionViewLayout: CollectionViewStackFlowLayout(itemsCount: images.count, overlay: overlay))
+      
+    let layout = CollectionViewStackFlowLayout(itemsCount: images.count, overlay: overlay, scaleRatio: scaleRatio, scale:scaleValue)
+    super.init(collectionViewLayout: layout)
   }
 
   required init?(coder aDecoder: NSCoder) {

@@ -107,20 +107,29 @@ extension CollectionStackViewController {
   override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     delegate.controllerDidSelected(index: indexPath.row)
     
-    let currentCell = collectionView.cellForItemAtIndexPath(indexPath)
-    
-    UIView.animateWithDuration(0.3, animations: { () -> Void in
+    guard let currentCell = collectionView.cellForItemAtIndexPath(indexPath) else {
+      return
+    }
+
+    UIView.animateWithDuration(0.5, animations: { () -> Void in
+      // scale current cell
       let scale = CGAffineTransformMakeScale(1, 1)
       let offset = collectionView.contentOffset.x - (self.view.bounds.size.width - collectionView.bounds.size.width * CGFloat(self.overlay)) * CGFloat(indexPath.row)
-      let move = CGAffineTransformMakeTranslation(offset , 0)
-      currentCell?.transform = CGAffineTransformConcat(scale, move)
+      currentCell.transform = scale
+      currentCell.center = CGPoint(x: (currentCell.center.x + offset), y: currentCell.center.y)
+      currentCell.alpha = 1
       
+      // move visible cell left
+
       for  cell in self.collectionView!.visibleCells() where cell != currentCell {
-        cell.transform = CGAffineTransformMakeTranslation(self.view.bounds.size.width , 0)
+        let row = self.collectionView?.indexPathForCell(cell)?.row
+        if row > indexPath.row {
+          cell.transform = CGAffineTransformMakeTranslation(self.view.bounds.size.width, 0)
+        }
       }
       
-    }) { (success) -> Void in
-      self.dismissViewControllerAnimated(false, completion: nil)
+      }) { (success) -> Void in
+        self.dismissViewControllerAnimated(false, completion: nil)
     }
   }
 }

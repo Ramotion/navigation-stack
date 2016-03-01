@@ -91,7 +91,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVF-pn-vuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1225" y="1136"/>
+            <point key="canvasLocation" x="1243" y="1136"/>
         </scene>
         <!--Fifth View Controller-->
         <scene sceneID="C7N-bv-xZB">
@@ -101,6 +101,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <color key="separatorColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <sections>
@@ -363,11 +364,6 @@
                         <barButtonItem key="leftBarButtonItem" image="back" id="4Af-Xf-z75">
                             <connections>
                                 <action selector="backHandler:" destination="Y7k-xx-h5q" id="smv-wd-MTx"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="R34-E4-1Co">
-                            <connections>
-                                <action selector="showHandler:" destination="Y7k-xx-h5q" id="52J-EY-Xbt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -917,11 +913,6 @@
                         <barButtonItem key="leftBarButtonItem" image="back" id="3or-01-oV6">
                             <connections>
                                 <action selector="backHandler:" destination="iaH-ZQ-ay5" id="DZv-HC-MAX"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="UI5-M5-e96">
-                            <connections>
-                                <action selector="showHandler:" destination="iaH-ZQ-ay5" id="7Qd-33-wnX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1638,11 +1629,6 @@
                                 <action selector="backHandler:" destination="nzl-xt-jfq" id="5p0-sR-YpK"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="qKm-c4-2Wz">
-                            <connections>
-                                <action selector="showHandler:" destination="nzl-xt-jfq" id="S9E-sm-OqJ"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -2194,11 +2180,6 @@
                         <barButtonItem key="leftBarButtonItem" image="back" id="OAc-d7-aUh">
                             <connections>
                                 <action selector="backHandler:" destination="vgN-Iu-4mR" id="oAG-8U-UYd"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="p9N-Im-l7z">
-                            <connections>
-                                <action selector="showHandler:" destination="vgN-Iu-4mR" id="HZw-qB-Gsz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

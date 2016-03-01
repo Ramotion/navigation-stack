@@ -19,6 +19,11 @@ class FirstTableViewController: UITableViewController {
     UIColor(red:0.61, green:0.86, blue:0.87, alpha:1),
     UIColor(red:0.77, green:0.76, blue:0.92, alpha:1)
   ]
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    navigationController!.interactivePopGestureRecognizer?.delegate = self
+  }
 
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
@@ -28,6 +33,23 @@ class FirstTableViewController: UITableViewController {
     }
   }
   
+}
+
+// MARK: UIGestureRecognizerDelegate
+
+extension FirstTableViewController: UIGestureRecognizerDelegate {
+  func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+    
+    if navigationController?.viewControllers.count == 2 {
+      return true
+    }
+    
+    if let navigationController = self.navigationController as? NavigationStack {
+      navigationController.showControllers()
+    }
+    
+    return false
+  }
 }
 
 // MARK: UITableViewDataSource

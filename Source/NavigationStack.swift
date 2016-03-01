@@ -24,6 +24,7 @@ public class NavigationStack: UINavigationController {
     super.init(coder: aDecoder)
     
     delegate = self
+//    addedInteractivePopGesture()
   }
 }
 
@@ -44,6 +45,15 @@ extension NavigationStack {
   }
 }
 
+// MARK: gesture
+
+//extension NavigationStack: UIGestureRecognizerDelegate {
+//  public func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+//    print("true")
+//    return true
+//  }
+//}
+
 // MARK: Additional helpers
 
 extension NavigationStack {
@@ -52,6 +62,17 @@ extension NavigationStack {
     let viewController = viewControllers[index]
     popToViewController(viewController, animated: animated)
   }
+  
+//  private func addedInteractivePopGesture() {
+//    
+//    guard let interactivePopGestureRecognizer = self.interactivePopGestureRecognizer else {
+//      print("false")
+//      return
+//    }
+//    
+//    interactivePopGestureRecognizer.delegate = self
+//    interactivePopGestureRecognizer.enabled = true
+//  }
 }
 
 

@@ -73,7 +73,9 @@ extension CollectionViewStackFlowLayout {
     attributes.alpha = calculateAlpha(attributes, itemWidth: itemWidth, offset: contentOffsetX)
 
     if additionScale > 0 && openAnimating {
+      print("additional scale \(additionScale)")
       additionScale -= 0.02
+      additionScale = additionScale < 0 ? 0 : additionScale
     }
     attributes.zIndex    = attributes.indexPath.row
   }

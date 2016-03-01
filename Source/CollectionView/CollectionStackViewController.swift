@@ -26,7 +26,8 @@ class CollectionStackViewController: UICollectionViewController {
     overlay: Float,
     scaleRatio: Float,
     scaleValue: Float,
-    bgColor: UIColor) {
+    bgColor: UIColor,
+    decelerationRate:CGFloat) {
       
       self.screens  = images
       self.delegate = delegate
@@ -37,6 +38,7 @@ class CollectionStackViewController: UICollectionViewController {
       
       if let collectionView = self.collectionView {
         collectionView.backgroundColor = bgColor
+        collectionView.decelerationRate = decelerationRate
       }
   }
 

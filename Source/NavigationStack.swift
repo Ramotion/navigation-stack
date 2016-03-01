@@ -15,6 +15,7 @@ public class NavigationStack: UINavigationController {
   @IBInspectable var overlay: Float = 0.8
   @IBInspectable var scaleRatio: Float = 14.0
   @IBInspectable var scaleValue: Float = 0.99
+  @IBInspectable var decelerationRate: CGFloat = UIScrollViewDecelerationRateNormal
   
   @IBInspectable var bgColor: UIColor = .blackColor()
   
@@ -24,7 +25,6 @@ public class NavigationStack: UINavigationController {
     super.init(coder: aDecoder)
     
     delegate = self
-//    addedInteractivePopGesture()
   }
 }
 
@@ -39,20 +39,13 @@ extension NavigationStack {
       overlay: overlay,
       scaleRatio: scaleRatio,
       scaleValue: scaleValue,
-      bgColor: bgColor)
-    
+      bgColor: bgColor,
+      decelerationRate: decelerationRate)
+        
     presentViewController(collectioView, animated: false, completion: nil)
   }
 }
 
-// MARK: gesture
-
-//extension NavigationStack: UIGestureRecognizerDelegate {
-//  public func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
-//    print("true")
-//    return true
-//  }
-//}
 
 // MARK: Additional helpers
 
@@ -62,17 +55,6 @@ extension NavigationStack {
     let viewController = viewControllers[index]
     popToViewController(viewController, animated: animated)
   }
-  
-//  private func addedInteractivePopGesture() {
-//    
-//    guard let interactivePopGestureRecognizer = self.interactivePopGestureRecognizer else {
-//      print("false")
-//      return
-//    }
-//    
-//    interactivePopGestureRecognizer.delegate = self
-//    interactivePopGestureRecognizer.enabled = true
-//  }
 }
 
 

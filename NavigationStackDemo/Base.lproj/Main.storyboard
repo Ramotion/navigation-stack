@@ -939,7 +939,7 @@
                             <color key="value" red="0.75686274509803919" green="0.75686274509803919" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="decelerationRate">
-                            <real key="value" value="0.59999999999999998"/>
+                            <real key="value" value="0.80000000000000004"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>

@@ -108,24 +108,33 @@ extension CollectionStackViewController {
       return
     }
 
-    UIView.animateWithDuration(0.5, animations: { () -> Void in
-      // scale current cell
-      let scale = CGAffineTransformMakeScale(1, 1)
-      let offset = collectionView.contentOffset.x - (self.view.bounds.size.width - collectionView.bounds.size.width * CGFloat(self.overlay)) * CGFloat(indexPath.row)
-      currentCell.transform = scale
-      currentCell.center = CGPoint(x: (currentCell.center.x + offset), y: currentCell.center.y)
-      currentCell.alpha = 1
-      
-      // move visible cell left
-
+    // move cells
+    UIView.animateWithDuration(0.3, delay: 0, options:.CurveEaseIn,
+    animations: { () -> Void in
       for  cell in self.collectionView!.visibleCells() where cell != currentCell {
         let row = self.collectionView?.indexPathForCell(cell)?.row
-        if row > indexPath.row {
-          cell.transform = CGAffineTransformMakeTranslation(self.view.bounds.size.width, 0)
+        if row > indexPath.row { // move right
+          cell.center = CGPoint(x: cell.center.x + self.view.bounds.size.width * 2, y: cell.center.y)
+        } else { // move left
+          cell.center = CGPoint(x: cell.center.x - self.view.bounds.size.width * 2, y: cell.center.y)
         }
       }
+      }, completion: nil)
+    
+    UIView.animateWithDuration(0.2, delay: 0.2, options:.CurveEaseOut,
+      animations: { () -> Void in
+        let offset = collectionView.contentOffset.x - (self.view.bounds.size.width - collectionView.bounds.size.width * CGFloat(self.overlay)) * CGFloat(indexPath.row)
+        currentCell.center = CGPoint(x: (currentCell.center.x + offset), y: currentCell.center.y)
+      }, completion: nil)
+  
+    // scale current cell
+    UIView.animateWithDuration(0.2, delay: 0.6, options:.CurveEaseOut, animations: { () -> Void in
+      let scale = CGAffineTransformMakeScale(1, 1)
       
-      }) { (success) -> Void in
+      currentCell.transform = scale
+      currentCell.alpha = 1
+      
+    }) { (success) -> Void in
         self.dismissViewControllerAnimated(false, completion: nil)
     }
   }

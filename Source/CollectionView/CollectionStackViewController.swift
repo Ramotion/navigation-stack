@@ -57,11 +57,6 @@ class CollectionStackViewController: UICollectionViewController {
     
     collectionViewLayout.openAnimating = true
     scrolltoIndex(0, animated: true, position: .Left) // open animation
-//    if let collectionView = self.collectionView {
-//      UIView.animateWithDuration(0.4) {
-//        collectionView.contentOffset = CGPoint(x: 0, y: collectionView.contentOffset.y)
-//      }
-//    }
   }
 }
 

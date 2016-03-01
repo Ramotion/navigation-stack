@@ -70,6 +70,7 @@ extension CollectionViewStackFlowLayout {
     let scale = transformScale(attributes, allWidth: allWidth, offset: contentOffsetX)
     let move  = transformMove(attributes, itemWidth: itemWidth, offset: contentOffsetX)
     attributes.transform = CGAffineTransformConcat(scale, move)
+    attributes.alpha = calculateAlpha(attributes, itemWidth: itemWidth, offset: contentOffsetX)
 
     if additionScale > 0 && openAnimating {
       additionScale -= 0.02
@@ -102,28 +103,21 @@ extension CollectionViewStackFlowLayout {
     currentContentOffsetX = min(max(currentContentOffsetX, 0),itemWidth)
     
     var dx = (currentContentOffsetX / itemWidth)
-    if attributes.indexPath.row == 0 {
-     print("dx : \(dx) offset: \(currentContentOffsetX)")
+    if let collectionView = self.collectionView {
+      dx *= collectionView.bounds.size.width / 8.0
     }
-  
-    attributes.alpha = 1 - dx
-//    dx = (1 - dx) * 30
-    
-//    if dx == 1 {
-//      attributes.hidden = true
-//    } else {
-//      attributes.hidden = false
-//    }
-//    
-//    dx = pow(dx,2) * 170
-    dx *= 50.0
-    
-//    if attributes.indexPath.row == 0 {
-//      dx = (dx * 2) >= currentContentOffsetX ? currentContentOffsetX - 30 : dx
-      dx = currentContentOffsetX - dx
-//    }
+    dx = currentContentOffsetX - dx
+
     return CGAffineTransformMakeTranslation(dx, 0)
   }
-
+  
+  private func calculateAlpha(attributes: UICollectionViewLayoutAttributes, itemWidth: CGFloat, offset: CGFloat) -> CGFloat {
+    var currentContentOffsetX = offset - itemWidth * CGFloat(attributes.indexPath.row)
+    currentContentOffsetX = min(max(currentContentOffsetX, 0),itemWidth)
+    
+    let dx = (currentContentOffsetX / itemWidth)
+    
+    return 1.0 - dx
+  }
 
 }

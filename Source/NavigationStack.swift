@@ -21,6 +21,8 @@ public class NavigationStack: UINavigationController {
   
   private var screens = [UIImage]()
   
+  weak public var stackDelegate: UINavigationControllerDelegate? // use this instead delegate
+  
   public required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     
@@ -65,6 +67,8 @@ extension NavigationStack: UINavigationControllerDelegate {
   public func navigationController(navigationController: UINavigationController,
     willShowViewController viewController: UIViewController,
     animated: Bool) {
+      
+      stackDelegate?.navigationController?(navigationController, willShowViewController: viewController, animated: animated)
   
       if navigationController.viewControllers.count > screens.count + 1 {
         screens.append(view.takeScreenshot())
@@ -73,6 +77,28 @@ extension NavigationStack: UINavigationControllerDelegate {
         screens.removeLast()
       }
   }
+  
+  public func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
+    stackDelegate?.navigationController?(navigationController, didShowViewController: viewController, animated: animated)
+  }
+
+//  ???
+//  public func navigationControllerSupportedInterfaceOrientations(navigationController: UINavigationController) -> UIInterfaceOrientationMask {
+//    return stackDelegate?.navigationControllerSupportedInterfaceOrientations?(navigationController)
+//  }
+  
+//  ???
+//  optional public func navigationControllerPreferredInterfaceOrientationForPresentation(navigationController: UINavigationController) -> UIInterfaceOrientation
+//  
+
+  public func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    return stackDelegate?.navigationController?(navigationController, interactionControllerForAnimationController: animationController)
+  }
+
+  public func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    return stackDelegate?.navigationController?(navigationController, animationControllerForOperation: operation, fromViewController: fromVC, toViewController: toVC)
+  }
+  
 }
 
 extension NavigationStack: CollectionStackViewControllerDelegate {

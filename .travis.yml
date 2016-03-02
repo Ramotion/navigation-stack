@@ -3,4 +3,3 @@ language: objective-c
 
 xcode_project: NavigationStackDemo.xcodeproj
 xcode_scheme: NavigationStackDemo
-xcode_sdk: iphonesimulator

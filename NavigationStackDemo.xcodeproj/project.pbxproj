@@ -17,6 +17,24 @@
 		8444B1281C80250A00B53B4E /* CollectionViewStackFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B1221C80250A00B53B4E /* CollectionViewStackFlowLayout.swift */; };
 		8444B1291C80250A00B53B4E /* CollectionStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B1231C80250A00B53B4E /* CollectionStackViewController.swift */; };
 		8444B12B1C80250A00B53B4E /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B1261C80250A00B53B4E /* NavigationStack.swift */; };
+		84500F1E1C87043A00B0550E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FAE1C846BD600E2C54D /* TableViewCell.swift */; };
+		84500F1F1C87043B00B0550E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FAE1C846BD600E2C54D /* TableViewCell.swift */; };
+		84500F201C87044100B0550E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FB01C846C6100E2C54D /* SecondViewController.swift */; };
+		84500F211C87044200B0550E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FB01C846C6100E2C54D /* SecondViewController.swift */; };
+		84500F221C87044500B0550E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FAC1C846B9200E2C54D /* ThirdViewController.swift */; };
+		84500F231C87044500B0550E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FAC1C846B9200E2C54D /* ThirdViewController.swift */; };
+		84500F241C87044700B0550E /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FAA1C846B8C00E2C54D /* FourthViewController.swift */; };
+		84500F251C87044800B0550E /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FAA1C846B8C00E2C54D /* FourthViewController.swift */; };
+		84500F261C87044B00B0550E /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FA81C846B8100E2C54D /* FifthViewController.swift */; };
+		84500F271C87044C00B0550E /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0FA81C846B8100E2C54D /* FifthViewController.swift */; };
+		84500F281C87045000B0550E /* CollectionViewStackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B1201C80250A00B53B4E /* CollectionViewStackCell.swift */; };
+		84500F291C87045100B0550E /* CollectionViewStackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B1201C80250A00B53B4E /* CollectionViewStackCell.swift */; };
+		84500F2A1C87045400B0550E /* CollectionViewStackFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B1221C80250A00B53B4E /* CollectionViewStackFlowLayout.swift */; };
+		84500F2B1C87045400B0550E /* CollectionViewStackFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B1221C80250A00B53B4E /* CollectionViewStackFlowLayout.swift */; };
+		84500F2C1C87045700B0550E /* CollectionStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B1231C80250A00B53B4E /* CollectionStackViewController.swift */; };
+		84500F2D1C87045800B0550E /* CollectionStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B1231C80250A00B53B4E /* CollectionStackViewController.swift */; };
+		84500F2E1C87045B00B0550E /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B1261C80250A00B53B4E /* NavigationStack.swift */; };
+		84500F2F1C87045B00B0550E /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B1261C80250A00B53B4E /* NavigationStack.swift */; };
 		847B0F871C842ED800E2C54D /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F861C842ED800E2C54D /* FirstTableViewController.swift */; };
 		847B0F881C842ED800E2C54D /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F861C842ED800E2C54D /* FirstTableViewController.swift */; };
 		847B0F891C842ED800E2C54D /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B0F861C842ED800E2C54D /* FirstTableViewController.swift */; };
@@ -393,8 +411,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84500F2E1C87045B00B0550E /* NavigationStack.swift in Sources */,
+				84500F241C87044700B0550E /* FourthViewController.swift in Sources */,
+				84500F201C87044100B0550E /* SecondViewController.swift in Sources */,
+				84500F1E1C87043A00B0550E /* TableViewCell.swift in Sources */,
+				84500F221C87044500B0550E /* ThirdViewController.swift in Sources */,
 				8444B1051C80238500B53B4E /* NavigationStackDemoTests.swift in Sources */,
+				84500F2C1C87045700B0550E /* CollectionStackViewController.swift in Sources */,
+				84500F281C87045000B0550E /* CollectionViewStackCell.swift in Sources */,
 				847B0F881C842ED800E2C54D /* FirstTableViewController.swift in Sources */,
+				84500F2A1C87045400B0550E /* CollectionViewStackFlowLayout.swift in Sources */,
+				84500F261C87044B00B0550E /* FifthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,8 +429,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84500F2F1C87045B00B0550E /* NavigationStack.swift in Sources */,
+				84500F251C87044800B0550E /* FourthViewController.swift in Sources */,
+				84500F211C87044200B0550E /* SecondViewController.swift in Sources */,
+				84500F1F1C87043B00B0550E /* TableViewCell.swift in Sources */,
+				84500F231C87044500B0550E /* ThirdViewController.swift in Sources */,
 				8444B1101C80238500B53B4E /* NavigationStackDemoUITests.swift in Sources */,
+				84500F2D1C87045800B0550E /* CollectionStackViewController.swift in Sources */,
+				84500F291C87045100B0550E /* CollectionViewStackCell.swift in Sources */,
 				847B0F891C842ED800E2C54D /* FirstTableViewController.swift in Sources */,
+				84500F2B1C87045400B0550E /* CollectionViewStackFlowLayout.swift in Sources */,
+				84500F271C87044C00B0550E /* FifthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840D540E1C8705A800555605 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D540D1C8705A800555605 /* TableViewCell.swift */; };
+		840D54101C8705FA00555605 /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D540F1C8705FA00555605 /* FirstTableViewController.swift */; };
 		8444B0F01C80238500B53B4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B0EF1C80238500B53B4E /* AppDelegate.swift */; };
 		8444B0F51C80238500B53B4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8444B0F31C80238500B53B4E /* Main.storyboard */; };
 		8444B0F71C80238500B53B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8444B0F61C80238500B53B4E /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840D540D1C8705A800555605 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		840D540F1C8705FA00555605 /* FirstTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTableViewController.swift; sourceTree = "<group>"; };
 		8444B0EC1C80238500B53B4E /* NavigationStackDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationStackDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8444B0EF1C80238500B53B4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8444B0F41C80238500B53B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -207,6 +211,7 @@
 		847B0F8A1C8430C100E2C54D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				840D540D1C8705A800555605 /* TableViewCell.swift */,
 			);
 			name = Cells;
 			path = ../Cells;
@@ -215,6 +220,7 @@
 		847B0F8F1C844B4F00E2C54D /* FirstViewController */ = {
 			isa = PBXGroup;
 			children = (
+				840D540F1C8705FA00555605 /* FirstTableViewController.swift */,
 				847B0F8A1C8430C100E2C54D /* Cells */,
 			);
 			path = FirstViewController;
@@ -388,6 +394,8 @@
 				8444B1271C80250A00B53B4E /* CollectionViewStackCell.swift in Sources */,
 				847B0FAB1C846B8C00E2C54D /* FourthViewController.swift in Sources */,
 				8444B1291C80250A00B53B4E /* CollectionStackViewController.swift in Sources */,
+				840D540E1C8705A800555605 /* TableViewCell.swift in Sources */,
+				840D54101C8705FA00555605 /* FirstTableViewController.swift in Sources */,
 				8444B1281C80250A00B53B4E /* CollectionViewStackFlowLayout.swift in Sources */,
 				847B0FAD1C846B9200E2C54D /* ThirdViewController.swift in Sources */,
 				8444B12B1C80250A00B53B4E /* NavigationStack.swift in Sources */,

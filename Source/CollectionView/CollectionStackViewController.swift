@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: CollectionStackViewController
 
-protocol CollectionStackViewControllerDelegate {
+protocol CollectionStackViewControllerDelegate: class {
   func controllerDidSelected(index index: Int)
 }
 
@@ -19,10 +19,10 @@ class CollectionStackViewController: UICollectionViewController {
   private var screens: [UIImage]
   private let overlay: Float
   
-  let delegate: CollectionStackViewControllerDelegate
+  weak var delegate: CollectionStackViewControllerDelegate?
   
   init(images: [UIImage],
-    delegate: CollectionStackViewControllerDelegate,
+    delegate: CollectionStackViewControllerDelegate?,
     overlay: Float,
     scaleRatio: Float,
     scaleValue: Float,
@@ -102,7 +102,7 @@ extension CollectionStackViewController {
   }
   
   override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-    delegate.controllerDidSelected(index: indexPath.row)
+    delegate?.controllerDidSelected(index: indexPath.row)
     
     guard let currentCell = collectionView.cellForItemAtIndexPath(indexPath) else {
       return

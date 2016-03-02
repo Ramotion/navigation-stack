@@ -42,16 +42,6 @@
                referenceType = "1">
             </LocationScenarioReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8444B10A1C80238500B53B4E"
-               BuildableName = "NavigationStackDemoUITests.xctest"
-               BlueprintName = "NavigationStackDemoUITests"
-               ReferencedContainer = "container:NavigationStackDemo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

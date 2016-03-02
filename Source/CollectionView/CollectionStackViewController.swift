@@ -152,7 +152,9 @@ extension CollectionStackViewController {
       currentCell.alpha = 1
       
     }) { (success) -> Void in
+      dispatch_async(dispatch_get_main_queue(), { () -> Void in
         self.dismissViewControllerAnimated(false, completion: nil)
+      })
     }
   }
 }

@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		840D540E1C8705A800555605 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D540D1C8705A800555605 /* TableViewCell.swift */; };
 		840D54101C8705FA00555605 /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D540F1C8705FA00555605 /* FirstTableViewController.swift */; };
+		842FF8E11C8707BD0030E758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B0EF1C80238500B53B4E /* AppDelegate.swift */; };
+		842FF8E21C8707BE0030E758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B0EF1C80238500B53B4E /* AppDelegate.swift */; };
+		842FF8E31C8707D70030E758 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D540D1C8705A800555605 /* TableViewCell.swift */; };
+		842FF8E41C8707D70030E758 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D540D1C8705A800555605 /* TableViewCell.swift */; };
+		842FF8E51C8707DA0030E758 /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D540F1C8705FA00555605 /* FirstTableViewController.swift */; };
+		842FF8E61C8707DA0030E758 /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D540F1C8705FA00555605 /* FirstTableViewController.swift */; };
 		8444B0F01C80238500B53B4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444B0EF1C80238500B53B4E /* AppDelegate.swift */; };
 		8444B0F51C80238500B53B4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8444B0F31C80238500B53B4E /* Main.storyboard */; };
 		8444B0F71C80238500B53B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8444B0F61C80238500B53B4E /* Assets.xcassets */; };
@@ -413,8 +419,11 @@
 				84500F221C87044500B0550E /* ThirdViewController.swift in Sources */,
 				8444B1051C80238500B53B4E /* NavigationStackDemoTests.swift in Sources */,
 				84500F2C1C87045700B0550E /* CollectionStackViewController.swift in Sources */,
+				842FF8E31C8707D70030E758 /* TableViewCell.swift in Sources */,
 				84500F281C87045000B0550E /* CollectionViewStackCell.swift in Sources */,
+				842FF8E51C8707DA0030E758 /* FirstTableViewController.swift in Sources */,
 				84500F2A1C87045400B0550E /* CollectionViewStackFlowLayout.swift in Sources */,
+				842FF8E11C8707BD0030E758 /* AppDelegate.swift in Sources */,
 				84500F261C87044B00B0550E /* FifthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,8 +438,11 @@
 				84500F231C87044500B0550E /* ThirdViewController.swift in Sources */,
 				8444B1101C80238500B53B4E /* NavigationStackDemoUITests.swift in Sources */,
 				84500F2D1C87045800B0550E /* CollectionStackViewController.swift in Sources */,
+				842FF8E41C8707D70030E758 /* TableViewCell.swift in Sources */,
 				84500F291C87045100B0550E /* CollectionViewStackCell.swift in Sources */,
+				842FF8E61C8707DA0030E758 /* FirstTableViewController.swift in Sources */,
 				84500F2B1C87045400B0550E /* CollectionViewStackFlowLayout.swift in Sources */,
+				842FF8E21C8707BE0030E758 /* AppDelegate.swift in Sources */,
 				84500F271C87044C00B0550E /* FifthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

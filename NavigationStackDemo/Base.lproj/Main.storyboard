@@ -1627,6 +1627,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="navbarColor">
+                            <color key="value" red="0.96470588235294119" green="0.73725490196078436" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="vgN-Iu-4mR" kind="show" identifier="push" id="02S-0K-jtE"/>
                     </connections>
@@ -1635,10 +1640,10 @@
             </objects>
             <point key="canvasLocation" x="2616" y="1136"/>
         </scene>
-        <!--Fourth View Controller-->
+        <!--Third View Controller-->
         <scene sceneID="Src-9g-5Bx">
             <objects>
-                <tableViewController id="vgN-Iu-4mR" customClass="FourthViewController" customModule="NavigationStackDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="vgN-Iu-4mR" customClass="ThirdViewController" customModule="NavigationStackDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" id="yBE-g4-hfK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2179,6 +2184,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="navbarColor">
+                            <color key="value" red="0.78431372549019607" green="0.88235294117647056" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="Y7k-xx-h5q" kind="show" identifier="push" id="98a-b7-ofi"/>
                     </connections>

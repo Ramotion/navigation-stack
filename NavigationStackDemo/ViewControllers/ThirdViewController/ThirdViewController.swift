@@ -10,11 +10,13 @@ import UIKit
 
 class ThirdViewController: UITableViewController {
   
+  @IBInspectable var navbarColor: UIColor = .blackColor()
+  
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     
     if let navigationController = navigationController {
-      navigationController.navigationBar.barTintColor = UIColor(red:0.97, green:0.74, blue:0.58, alpha:1)
+      navigationController.navigationBar.barTintColor = navbarColor
     }
   }
   

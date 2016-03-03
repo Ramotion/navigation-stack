@@ -130,11 +130,10 @@ extension CollectionStackViewController {
     animations: { () -> Void in
       for  cell in self.collectionView!.visibleCells() where cell != currentCell {
         let row = self.collectionView?.indexPathForCell(cell)?.row
-        if row > indexPath.row { // move right
-          cell.center = CGPoint(x: cell.center.x + self.view.bounds.size.width * 2, y: cell.center.y)
-        } else { // move left
-          cell.center = CGPoint(x: cell.center.x - self.view.bounds.size.width * 2, y: cell.center.y)
-        }
+        let xPosition = row < indexPath.row ? cell.center.x - self.view.bounds.size.width * 2
+                                            : cell.center.x + self.view.bounds.size.width * 2
+        
+        cell.center = CGPoint(x: xPosition, y: cell.center.y)
       }
       }, completion: nil)
     

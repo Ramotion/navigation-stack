@@ -54,6 +54,7 @@ extension CollectionViewStackCell {
 
     let imageView = UIImageView(frame: CGRect.zero)
     imageView.translatesAutoresizingMaskIntoConstraints = false
+    imageView.layer.shouldRasterize = true
     contentView.addSubview(imageView)
     
     contentView.addConstraints([
@@ -84,5 +85,20 @@ extension CollectionViewStackCell {
     layer.shadowPath = UIBezierPath(rect: bounds).CGPath
     layer.shouldRasterize = true;
   }
+  
+  private func addBlurOnImage(image: UIImageView) {
+    // create effect
+//    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+//    
+//    // add effect to an effect view
+//    UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:blur];
+//    effectView.frame = self.view.frame;
+//    
+//    // add the effect view to the image view
+//    [self.imageView addSubview:effectView];
+    
+    
+  }
+
 
 }

@@ -758,6 +758,7 @@ USA</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wMY-lE-9QR" customClass="NavigationStack" customModule="NavigationStackDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4z8-om-Bbm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -766,7 +767,7 @@ USA</string>
                     <nil name="viewControllers"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
-                            <color key="value" red="0.75686274509803919" green="0.75686274509803919" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="0.77254901960784317" green="0.80000000000000004" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="decelerationRate">
                             <real key="value" value="0.80000000000000004"/>

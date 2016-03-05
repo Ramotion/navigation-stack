@@ -51,6 +51,10 @@ public class NavigationStack: UINavigationController {
 
 extension NavigationStack {
   public func showControllers() {
+    if screens.count == 0 {
+      return
+    }
+    
     var allScreens = screens
     allScreens.append(view.takeScreenshot())
     let collectioView = CollectionStackViewController(images: allScreens,

@@ -278,7 +278,7 @@
             </objects>
             <point key="canvasLocation" x="1232" y="1139"/>
         </scene>
-        <!--Fifth View Controller-->
+        <!--Sally Friends-->
         <scene sceneID="C7N-bv-xZB">
             <objects>
                 <tableViewController id="Y7k-xx-h5q" customClass="FifthViewController" customModule="NavigationStackDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -481,7 +481,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="zMg-jd-dHX">
+                    <navigationItem key="navigationItem" title="Sally Friends" id="zMg-jd-dHX">
                         <barButtonItem key="leftBarButtonItem" image="backButton" id="4Af-Xf-z75">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -494,7 +494,7 @@
             </objects>
             <point key="canvasLocation" x="3985" y="1164.5"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Ramotion-->
         <scene sceneID="fes-48-lfd">
             <objects>
                 <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="iaH-ZQ-ay5" customClass="SecondViewController" customModule="NavigationStackDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -726,7 +726,7 @@ USA</string>
                             <outlet property="delegate" destination="iaH-ZQ-ay5" id="68B-7k-l1G"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ufe-Ky-cPA">
+                    <navigationItem key="navigationItem" title="Ramotion" id="Ufe-Ky-cPA">
                         <barButtonItem key="leftBarButtonItem" image="backButton" id="3or-01-oV6">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -770,7 +770,7 @@ USA</string>
             </objects>
             <point key="canvasLocation" x="535" y="1139"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Post-->
         <scene sceneID="MGp-L7-zcj">
             <objects>
                 <tableViewController id="nzl-xt-jfq" customClass="ThirdViewController" customModule="NavigationStackDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -805,11 +805,11 @@ USA</string>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZY-t1-gAo">
                                                     <rect key="frame" x="20" y="73" width="560" height="421"/>
-                                                    <mutableString key="text">At about this time of year, some months after New Year’s resolutions have been made and kept, or made and neglected, one thing is undeniable: we have a chance to learn and grow every day, no matter what we did not do yesterday or neglected to do last week.  Make Use of This Moment
+                                                    <string key="text">At about this time of year, some months after New Year’s resolutions have been made and kept, or made and neglected, one thing is undeniable: we have a chance to learn and grow every day, no matter what we did not do yesterday or neglected to do last week.  Make Use of This Moment
 
 Making use of this moment, of the NOW, is a principle that stress management experts, psycho-therapists, meditators, and many authors such as Dr. Wayne Dyer, Jon Kabat-Zinn, and Eckhart Tolle have been talking and writing about for years. 
 
-The only moment, the only life we have is in the NOW. What happened a few moments or several years ago is gone, what will happen this evening, or next month when we go on holidays is not here yet. Thus, if we live our lives thinking about past events or future possibilities, we are literally not living our life.  Developing Flow.</mutableString>
+The only moment, the only life we have is in the NOW. What happened a few moments or several years ago is gone, what will happen this evening, or next month when we go on holidays is not here yet. Thus, if we live our lives thinking about past events or future possibilities, we are literally not living our life.  Developing Flow.</string>
                                                     <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
                                                     <color key="textColor" red="0.36078431370000003" green="0.41176470590000003" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -886,7 +886,7 @@ The only moment, the only life we have is in the NOW. What happened a few moment
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="UNy-Xt-gMS">
+                    <navigationItem key="navigationItem" title="Post" id="UNy-Xt-gMS">
                         <barButtonItem key="leftBarButtonItem" image="backButton" id="dTy-D2-oW3">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -909,7 +909,7 @@ The only moment, the only life we have is in the NOW. What happened a few moment
             </objects>
             <point key="canvasLocation" x="2617" y="1164.5"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Sally Perkins-->
         <scene sceneID="Src-9g-5Bx">
             <objects>
                 <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="vgN-Iu-4mR" customClass="ThirdViewController" customModule="NavigationStackDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -1099,7 +1099,7 @@ USA</string>
                             <outlet property="delegate" destination="vgN-Iu-4mR" id="lkh-v9-vJX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="87M-9z-ZBY">
+                    <navigationItem key="navigationItem" title="Sally Perkins" id="87M-9z-ZBY">
                         <barButtonItem key="leftBarButtonItem" image="backButton" id="OAc-d7-aUh">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>

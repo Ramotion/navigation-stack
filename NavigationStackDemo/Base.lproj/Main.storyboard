@@ -269,12 +269,22 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Avt-G1-zNd"/>
+                    <navigationItem key="navigationItem" id="Avt-G1-zNd">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="displaysSearchBarInNavigationBar" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
                     <connections>
+                        <outlet property="search" destination="w8B-dB-9wA" id="nwS-76-4cb"/>
                         <segue destination="iaH-ZQ-ay5" kind="show" identifier="push" id="HYI-Ga-o9f"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVF-pn-vuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchBar contentMode="redraw" id="w8B-dB-9wA">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </objects>
             <point key="canvasLocation" x="1232" y="1139"/>
         </scene>

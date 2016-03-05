@@ -12,9 +12,13 @@ import UIKit
 
 class FirstTableViewController: UITableViewController {
   
+  @IBOutlet var search: UISearchBar!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     navigationController!.interactivePopGestureRecognizer?.delegate = self
+    
+    navigationItem.titleView = search
   }
 
   override func viewWillAppear(animated: Bool) {

@@ -13,9 +13,11 @@ class SecondViewController: UITableViewController {
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     
-    if let navigationController = navigationController {
-      navigationController.navigationBar.barTintColor = UIColor(red:0.61, green:0.86, blue:0.87, alpha:1)
-    }
+//    if let navigationController = navigationController {
+////      navigationController.navigationBar.barTintColor = UIColor(red:0.61, green:0.86, blue:0.87, alpha:1)
+////      tableView.contentOffset = CGPoint(x: 0, y: -44)
+////      navigationController.navigationBar.translucent = true
+//    }
   }
 
 

@@ -15,9 +15,6 @@ class ThirdViewController: UITableViewController {
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     
-    if let navigationController = navigationController {
-      navigationController.navigationBar.barTintColor = navbarColor
-    }
   }
   
   @IBAction func backHandler(sender: AnyObject) {

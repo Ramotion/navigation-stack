@@ -36,6 +36,7 @@ public class NavigationStack: UINavigationController {
   
   @IBInspectable public var bgColor: UIColor = .blackColor()
   
+  public var bgView: UIView? = nil
   private var screens = [UIImage]()
   
   weak public var stackDelegate: UINavigationControllerDelegate? // use this instead delegate
@@ -63,6 +64,7 @@ extension NavigationStack {
       scaleRatio: scaleRatio,
       scaleValue: scaleValue,
       bgColor: bgColor,
+      bgView: bgView,
       decelerationRate: decelerationRate)
         
     presentViewController(collectioView, animated: false, completion: nil)

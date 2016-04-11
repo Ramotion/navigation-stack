@@ -43,7 +43,8 @@ class CollectionStackViewController: UICollectionViewController {
     overlay: Float,
     scaleRatio: Float,
     scaleValue: Float,
-    bgColor: UIColor,
+    bgColor: UIColor = UIColor.clearColor(),
+    bgView: UIView? = nil,
     decelerationRate:CGFloat) {
       
       self.screens  = images
@@ -55,6 +56,7 @@ class CollectionStackViewController: UICollectionViewController {
       
       if let collectionView = self.collectionView {
         collectionView.backgroundColor  = bgColor
+        collectionView.backgroundView   = bgView
         collectionView.decelerationRate = decelerationRate
       }
   }
@@ -119,8 +121,6 @@ extension CollectionStackViewController {
   }
   
   override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-    delegate?.controllerDidSelected(index: indexPath.row)
-    
     guard let currentCell = collectionView.cellForItemAtIndexPath(indexPath) else {
       return
     }
@@ -152,6 +152,7 @@ extension CollectionStackViewController {
       
     }) { (success) -> Void in
       dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        self.delegate?.controllerDidSelected(index: indexPath.row)
         self.dismissViewControllerAnimated(false, completion: nil)
       })
     }

@@ -29,12 +29,12 @@ import UIKit
 
 public class NavigationStack: UINavigationController {
   
-  @IBInspectable var overlay: Float = 0.8
-  @IBInspectable var scaleRatio: Float = 14.0
-  @IBInspectable var scaleValue: Float = 0.99
-  @IBInspectable var decelerationRate: CGFloat = UIScrollViewDecelerationRateNormal
+  @IBInspectable public var overlay: Float = 0.8
+  @IBInspectable public var scaleRatio: Float = 14.0
+  @IBInspectable public var scaleValue: Float = 0.99
+  @IBInspectable public var decelerationRate: CGFloat = UIScrollViewDecelerationRateNormal
   
-  @IBInspectable var bgColor: UIColor = .blackColor()
+  @IBInspectable public var bgColor: UIColor = .blackColor()
   
   private var screens = [UIImage]()
   

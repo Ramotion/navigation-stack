@@ -29,13 +29,14 @@ import UIKit
 
 public class NavigationStack: UINavigationController {
   
-  @IBInspectable var overlay: Float = 0.8
-  @IBInspectable var scaleRatio: Float = 14.0
-  @IBInspectable var scaleValue: Float = 0.99
-  @IBInspectable var decelerationRate: CGFloat = UIScrollViewDecelerationRateNormal
+  @IBInspectable public var overlay: Float = 0.8
+  @IBInspectable public var scaleRatio: Float = 14.0
+  @IBInspectable public var scaleValue: Float = 0.99
+  @IBInspectable public var decelerationRate: CGFloat = UIScrollViewDecelerationRateNormal
   
-  @IBInspectable var bgColor: UIColor = .blackColor()
+  @IBInspectable public var bgColor: UIColor = .blackColor()
   
+  public var bgView: UIView? = nil
   private var screens = [UIImage]()
   
   weak public var stackDelegate: UINavigationControllerDelegate? // use this instead delegate
@@ -63,6 +64,7 @@ extension NavigationStack {
       scaleRatio: scaleRatio,
       scaleValue: scaleValue,
       bgColor: bgColor,
+      bgView: bgView,
       decelerationRate: decelerationRate)
         
     presentViewController(collectioView, animated: false, completion: nil)

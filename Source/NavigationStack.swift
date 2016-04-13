@@ -72,17 +72,6 @@ extension NavigationStack {
 }
 
 
-// MARK: Additional helpers
-
-extension NavigationStack {
-  
-  private func popToIndex(index: Int, animated: Bool) {
-    let viewController = viewControllers[index]
-    popToViewController(viewController, animated: animated)
-  }
-}
-
-
 // MARK: UINavigationControllerDelegate
 
 extension NavigationStack: UINavigationControllerDelegate {
@@ -126,7 +115,9 @@ extension NavigationStack: UINavigationControllerDelegate {
 
 extension NavigationStack: CollectionStackViewControllerDelegate {
   func controllerDidSelected(index index: Int) {
-    popToIndex(index, animated: false)
+    
+    let newViewControllers = Array(viewControllers[0...index])
+    setViewControllers(newViewControllers, animated: false)
     screens.removeRange(index..<screens.count)
   }
 }

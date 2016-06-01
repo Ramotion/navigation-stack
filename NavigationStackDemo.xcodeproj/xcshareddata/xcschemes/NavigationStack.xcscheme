@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8444B0EB1C80238500B53B4E"
-               BuildableName = "NavigationStackDemo.app"
-               BlueprintName = "NavigationStackDemo"
+               BlueprintIdentifier = "84368B3B1CFEDDB1007C4278"
+               BuildableName = "NavigationStack.framework"
+               BlueprintName = "NavigationStack"
                ReferencedContainer = "container:NavigationStackDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8444B0FF1C80238500B53B4E"
-               BuildableName = "NavigationStackDemoTests.xctest"
-               BlueprintName = "NavigationStackDemoTests"
-               ReferencedContainer = "container:NavigationStackDemo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8444B0EB1C80238500B53B4E"
-            BuildableName = "NavigationStackDemo.app"
-            BlueprintName = "NavigationStackDemo"
-            ReferencedContainer = "container:NavigationStackDemo.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -61,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8444B0EB1C80238500B53B4E"
-            BuildableName = "NavigationStackDemo.app"
-            BlueprintName = "NavigationStackDemo"
+            BlueprintIdentifier = "84368B3B1CFEDDB1007C4278"
+            BuildableName = "NavigationStack.framework"
+            BlueprintName = "NavigationStack"
             ReferencedContainer = "container:NavigationStackDemo.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8444B0EB1C80238500B53B4E"
-            BuildableName = "NavigationStackDemo.app"
-            BlueprintName = "NavigationStackDemo"
+            BlueprintIdentifier = "84368B3B1CFEDDB1007C4278"
+            BuildableName = "NavigationStack.framework"
+            BlueprintName = "NavigationStack"
             ReferencedContainer = "container:NavigationStackDemo.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

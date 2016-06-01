@@ -87,18 +87,17 @@ extension CollectionViewStackCell {
   }
   
   private func addBlurOnImage(image: UIImageView) {
-    // create effect
-//    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-//    
-//    // add effect to an effect view
-//    UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:blur];
-//    effectView.frame = self.view.frame;
-//    
-//    // add the effect view to the image view
-//    [self.imageView addSubview:effectView];
     
+    let blurEffect = UIBlurEffect(style: .Dark)
+    let blurView = UIVisualEffectView(effect: blurEffect)
+    blurView.translatesAutoresizingMaskIntoConstraints = false
+    imageView!.insertSubview(blurView, atIndex: 3)
+
+    let vibrancyEffect = UIVibrancyEffect(forBlurEffect: blurEffect)
+    let vibrancyView = UIVisualEffectView(effect: vibrancyEffect)
+    vibrancyView.translatesAutoresizingMaskIntoConstraints = false
+    blurView.contentView.addSubview(vibrancyView)
     
   }
-
 
 }

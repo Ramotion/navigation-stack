@@ -6,6 +6,7 @@
 [![CocoaPods](https://img.shields.io/cocoapods/v/Navigation-stack.svg)](http://cocoapods.org/pods/Navigation-stack)
 [![Travis](https://img.shields.io/travis/Ramotion/navigation-stack.svg)](https://travis-ci.org/Ramotion/navigation-stack)
 [![codebeat badge](https://codebeat.co/badges/c322a039-b06b-46d9-bf40-e48cf0365b97)](https://codebeat.co/projects/github-com-ramotion-navigation-stack)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Ramotion/navigation-stack)
 
 [shot on dribbble](https://dribbble.com/shots/2583175-Navigation-Stack-Swift-Open-Source):
 ![Animation](Navigation-Stack.gif)
@@ -24,6 +25,11 @@ Just add the Source folder to your project.
 or use [CocoaPods](https://cocoapods.org) with Podfile:
 ``` ruby
 pod 'Navigation-stack'
+```
+
+or [Carthage](https://github.com/Carthage/Carthage) users can simply add Mantle to their `Cartfile`:
+```
+github "Ramotion/navigation-stack"
 ```
 
 ## Usage

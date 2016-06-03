@@ -27,7 +27,7 @@ or use [CocoaPods](https://cocoapods.org) with Podfile:
 pod 'Navigation-stack'
 ```
 
-or [Carthage](https://github.com/Carthage/Carthage) users can simply add Mantle to their `Cartfile`:
+or [Carthage](https://github.com/Carthage/Carthage) users can simply add to their `Cartfile`:
 ```
 github "Ramotion/navigation-stack"
 ```

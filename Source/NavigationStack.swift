@@ -25,24 +25,48 @@
 
 import UIKit
 
-// MARK: NavigationStack
-
+/// UINavigationcontroller with animation show lists of UIViewControllers
 public class NavigationStack: UINavigationController {
   
-  @IBInspectable public var overlay: Float = 0.8
-  @IBInspectable public var scaleRatio: Float = 14.0
-  @IBInspectable public var scaleValue: Float = 0.99
+  var overlay: Float = 0.8
+  var scaleRatio: Float = 14.0
+  var scaleValue: Float = 0.99
+  
+  /// A floating-point value that determines the rate of deceleration after the user lifts their finger.
   @IBInspectable public var decelerationRate: CGFloat = UIScrollViewDecelerationRateNormal
   
+  /// The color to use for the background of the lists of UIViewcontrollers.
   @IBInspectable public var bgColor: UIColor = .blackColor()
   
+  /// The background UIView of the lists of UIViewcontrollers.
   public var bgView: UIView? = nil
   private var screens = [UIImage]()
   
-  weak public var stackDelegate: UINavigationControllerDelegate? // use this instead delegate
+  /// The delegate of the navigation controller object. Use this instead delegate.
+  weak public var stackDelegate: UINavigationControllerDelegate?
   
+  /**
+   The initialized navigation controller object or nil if there was a problem initializing the object.
+   
+   - parameter aDecoder: aDecoder
+   
+   - returns: The initialized navigation controller object or nil if there was a problem initializing the object.
+   */
   public required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
+    
+    delegate = self
+  }
+  
+  /**
+   Initializes and returns a newly created navigation controller.
+   
+   - parameter rootViewController: The view controller that resides at the bottom of the navigation stack.
+   
+   - returns: The initialized navigation controller object or nil if there was a problem initializing the object.
+   */
+  override init(rootViewController: UIViewController) {
+    super.init(rootViewController: rootViewController)
     
     delegate = self
   }
@@ -51,6 +75,10 @@ public class NavigationStack: UINavigationController {
 // MARK: pulbic methods
 
 extension NavigationStack {
+  
+  /**
+   Show list of ViewControllers.
+   */
   public func showControllers() {
     if screens.count == 0 {
       return

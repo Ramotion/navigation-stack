@@ -1,0 +1,7 @@
+NavigationStack.swift
+	public func navigationController(navigationController: UINavigationController,
+    willShowViewController viewController: UIViewController,
+    animated: Bool)
+	public func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool)
+	public func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning?
+	public func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?

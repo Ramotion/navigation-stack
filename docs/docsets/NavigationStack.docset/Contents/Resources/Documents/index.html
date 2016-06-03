@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NavigationStack  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="NavigationStack  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">NavigationStack Docs</a> (69% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">NavigationStack Reference</a>
+        <img id="carat" src="img/carat.png" />
+        NavigationStack  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/NavigationStack.html">NavigationStack</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <p><img src="./header.png" alt="header"></p>
+<a href='#navigation_stack' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='navigation_stack'>navigation-stack</h1>
+
+<p><a href="http://twitter.com/Ramotion"><img src="https://img.shields.io/badge/Twitter-@Ramotion-blue.svg?style=flat" alt="Twitter"></a>
+<a href="https://cocoapods.org/pods/Navigation-stack"><img src="https://img.shields.io/cocoapods/p/Navigation-stack.svg" alt="CocoaPods"></a>
+<a href="http://cocoapods.org/pods/Navigation-stack"><img src="https://img.shields.io/cocoapods/v/Navigation-stack.svg" alt="CocoaPods"></a>
+<a href="https://travis-ci.org/Ramotion/navigation-stack"><img src="https://img.shields.io/travis/Ramotion/navigation-stack.svg" alt="Travis"></a>
+<a href="https://codebeat.co/projects/github-com-ramotion-navigation-stack"><img src="https://codebeat.co/badges/c322a039-b06b-46d9-bf40-e48cf0365b97" alt="codebeat badge"></a>
+<a href="https://github.com/Ramotion/navigation-stack"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a></p>
+
+<p><a href="https://dribbble.com/shots/2583175-Navigation-Stack-Swift-Open-Source">shot on dribbble</a>:
+<img src="Navigation-Stack.gif" alt="Animation"></p>
+
+<p>The <a href="https://store.ramotion.com/product/iphone-6-mockups?utm_source=gthb&amp;utm_medium=special&amp;utm_campaign=navigation-stack">iPhone mockup</a> available <a href="https://store.ramotion.com/product/iphone-6-mockups?utm_source=gthb&amp;utm_medium=special&amp;utm_campaign=navigation-stack">here</a>.</p>
+<a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
+
+<ul>
+<li>iOS 9.0+</li>
+<li>Xcode 7.3</li>
+</ul>
+<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
+
+<p>Just add the Source folder to your project.</p>
+
+<p>or use <a href="https://cocoapods.org">CocoaPods</a> with Podfile:
+<code>ruby
+pod &#39;Navigation-stack&#39;
+</code></p>
+
+<p>or <a href="https://github.com/Carthage/Carthage">Carthage</a> users can simply add to their <code>Cartfile</code>:
+<code>
+github &quot;Ramotion/navigation-stack&quot;
+</code></p>
+<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
+
+<p>1) YourNavigationController inherit from <code>NavigationStack</code></p>
+
+<p>2) add code to root viewViewController</p>
+<pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+    <span class="n">navigationController</span><span class="o">!.</span><span class="n">interactivePopGestureRecognizer</span><span class="p">?</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
+  <span class="p">}</span>
+</code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">YourViewController</span><span class="p">:</span> <span class="kt">UIGestureRecognizerDelegate</span> <span class="p">{</span>
+  <span class="kd">func</span> <span class="nf">gestureRecognizerShouldBegin</span><span class="p">(</span><span class="nv">gestureRecognizer</span><span class="p">:</span> <span class="kt">UIGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="n">navigationController</span><span class="p">?</span><span class="o">.</span><span class="n">viewControllers</span><span class="o">.</span><span class="n">count</span> <span class="o">==</span> <span class="mi">2</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">navigationController</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">navigationController</span> <span class="k">as?</span> <span class="kt">NavigationStack</span> <span class="p">{</span>
+      <span class="n">navigationController</span><span class="o">.</span><span class="nf">showControllers</span><span class="p">()</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="kc">false</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#licence' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='licence'>Licence</h2>
+
+<p>Navigation-stack is released under the MIT license.
+See <a href="./LICENSE">LICENSE</a> for details.</p>
+<a href='#about' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='about'>About</h2>
+
+<p>The project maintained by <a href="https://ramotion.com?utm_source=gthb&amp;utm_medium=special&amp;utm_campaign=navigation-stack">app development agency</a> <a href="https://ramotion.com?utm_source=gthb&amp;utm_medium=special&amp;utm_campaign=navigation-stack">Ramotion Inc.</a>
+See our other <a href="https://github.com/ramotion">open-source projects</a> or <a href="https://ramotion.com?utm_source=gthb&amp;utm_medium=special&amp;utm_campaign=navigation-stack">hire</a> us to design, develop, and grow your product.</p>
+
+<p><a href="https://twitter.com/intent/tweet?text=https://github.com/ramotion/navigation-stack"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" alt="Twitter URL"></a>
+<a href="https://twitter.com/ramotion"><img src="https://img.shields.io/twitter/follow/ramotion.svg?style=social" alt="Twitter Follow"></a></p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/Ramotion/navigation-stack" target="_blank" rel="external">AlexKalinkin</a>. All rights reserved. (Last updated: 2016-06-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -3,9 +3,9 @@
 <plist version="1.0">
   <dict>
     <key>CFBundleIdentifier</key>
-      <string>com.jazzy.navigationstack</string>
+      <string>com.jazzy.navigationstackdemo</string>
     <key>CFBundleName</key>
-      <string>NavigationStack</string>
+      <string>NavigationStackDemo</string>
     <key>DocSetPlatformFamily</key>
       <string>jazzy</string>
     <key>isDashDocset</key>

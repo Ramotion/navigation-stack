@@ -63,7 +63,7 @@ extension YourViewController: UIGestureRecognizerDelegate {
 }
 ```
 
-## Licence
+## License
 
 Navigation-stack is released under the MIT license.
 See [LICENSE](./LICENSE) for details.

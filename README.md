@@ -10,7 +10,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Ramotion/navigation-stack)
 
 ## About
-Ramotion specializes in building dedicated engineering teams and developing custom software.<br> [Contact our team](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=navigation-stack-contact-us) and we’ll help you work with the best engineers from Eastern Europe.
+This project is maintained by Ramotion, an agency specialized in building dedicated engineering teams and developing custom software.<br><br> [Contact our team](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=navigation-stack-contact-us) and we’ll help you work with the best engineers from Eastern Europe.
 
 ![Animation](https://raw.githubusercontent.com/Ramotion/navigation-stack/master/Navigation-Stack.gif)
 

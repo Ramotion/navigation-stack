@@ -58,19 +58,19 @@ extension CollectionViewStackCell {
     contentView.addSubview(imageView)
     
     contentView.addConstraints([
-      createConstraint(imageView, toItem: contentView, attribute: .Top),
-      createConstraint(imageView, toItem: contentView, attribute: .Bottom),
-      createConstraint(imageView, toItem: contentView, attribute: .Left),
-      createConstraint(imageView, toItem: contentView, attribute: .Right),
+      createConstraint(imageView, toItem: contentView, attribute: .top),
+      createConstraint(imageView, toItem: contentView, attribute: .bottom),
+      createConstraint(imageView, toItem: contentView, attribute: .left),
+      createConstraint(imageView, toItem: contentView, attribute: .right),
     ])
     
     return imageView
   }
   
-  private func createConstraint(item: UIImageView, toItem: UIView, attribute: NSLayoutAttribute) -> NSLayoutConstraint {
+  private func createConstraint(_ item: UIImageView, toItem: UIView, attribute: NSLayoutAttribute) -> NSLayoutConstraint {
    return NSLayoutConstraint(item: item,
                         attribute: attribute,
-                        relatedBy: .Equal,
+                        relatedBy: .equal,
                            toItem: toItem,
                         attribute: attribute,
                        multiplier: 1,
@@ -82,18 +82,18 @@ extension CollectionViewStackCell {
     layer.shadowOpacity = 0.30;
     layer.shadowRadius = 10.0;
     layer.shadowOffset = CGSize.zero;
-    layer.shadowPath = UIBezierPath(rect: bounds).CGPath
+    layer.shadowPath = UIBezierPath(rect: bounds).cgPath
     layer.shouldRasterize = true;
   }
   
-  private func addBlurOnImage(image: UIImageView) {
+  private func addBlurOnImage(_ image: UIImageView) {
     
-    let blurEffect = UIBlurEffect(style: .Dark)
+    let blurEffect = UIBlurEffect(style: .dark)
     let blurView = UIVisualEffectView(effect: blurEffect)
     blurView.translatesAutoresizingMaskIntoConstraints = false
-    imageView!.insertSubview(blurView, atIndex: 3)
+    imageView!.insertSubview(blurView, at: 3)
 
-    let vibrancyEffect = UIVibrancyEffect(forBlurEffect: blurEffect)
+    let vibrancyEffect = UIVibrancyEffect(blurEffect: blurEffect)
     let vibrancyView = UIVisualEffectView(effect: vibrancyEffect)
     vibrancyView.translatesAutoresizingMaskIntoConstraints = false
     blurView.contentView.addSubview(vibrancyView)

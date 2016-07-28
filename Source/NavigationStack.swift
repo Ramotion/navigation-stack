@@ -36,7 +36,7 @@ public class NavigationStack: UINavigationController {
   @IBInspectable public var decelerationRate: CGFloat = UIScrollViewDecelerationRateNormal
   
   /// The color to use for the background of the lists of UIViewcontrollers.
-  @IBInspectable public var bgColor: UIColor = .blackColor()
+  @IBInspectable public var bgColor: UIColor = .black()
   
   /// The background UIView of the lists of UIViewcontrollers.
   public var bgView: UIView? = nil
@@ -95,7 +95,7 @@ extension NavigationStack {
       bgView: bgView,
       decelerationRate: decelerationRate)
         
-    presentViewController(collectioView, animated: false, completion: nil)
+    present(collectioView, animated: false, completion: nil)
   }
 }
 
@@ -104,11 +104,11 @@ extension NavigationStack {
 
 extension NavigationStack: UINavigationControllerDelegate {
   
-  public func navigationController(navigationController: UINavigationController,
-    willShowViewController viewController: UIViewController,
+  public func navigationController(_ navigationController: UINavigationController,
+    willShow viewController: UIViewController,
     animated: Bool) {
       
-      stackDelegate?.navigationController?(navigationController, willShowViewController: viewController, animated: animated)
+      stackDelegate?.navigationController?(navigationController, willShow: viewController, animated: animated)
   
       if navigationController.viewControllers.count > screens.count + 1 {
         screens.append(view.takeScreenshot())
@@ -118,8 +118,8 @@ extension NavigationStack: UINavigationControllerDelegate {
       }
   }
   
-  public func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
-    stackDelegate?.navigationController?(navigationController, didShowViewController: viewController, animated: animated)
+  public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+    stackDelegate?.navigationController?(navigationController, didShow: viewController, animated: animated)
   }
 
 //  ???
@@ -131,22 +131,22 @@ extension NavigationStack: UINavigationControllerDelegate {
 //  optional public func navigationControllerPreferredInterfaceOrientationForPresentation(navigationController: UINavigationController) -> UIInterfaceOrientation
 //  
 
-  public func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-    return stackDelegate?.navigationController?(navigationController, interactionControllerForAnimationController: animationController)
+  public func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    return stackDelegate?.navigationController?(navigationController, interactionControllerFor: animationController)
   }
 
-  public func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-    return stackDelegate?.navigationController?(navigationController, animationControllerForOperation: operation, fromViewController: fromVC, toViewController: toVC)
+  public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    return stackDelegate?.navigationController?(navigationController, animationControllerFor: operation, from: fromVC, to: toVC)
   }
   
 }
 
 extension NavigationStack: CollectionStackViewControllerDelegate {
-  func controllerDidSelected(index index: Int) {
+  func controllerDidSelected(_ index: Int) {
     
     let newViewControllers = Array(viewControllers[0...index])
     setViewControllers(newViewControllers, animated: false)
-    screens.removeRange(index..<screens.count)
+    screens.removeSubrange(index..<screens.count)
   }
 }
 
@@ -156,12 +156,12 @@ extension UIView {
   
   func takeScreenshot() -> UIImage {
     
-    UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.mainScreen().scale)
-    drawViewHierarchyInRect(self.bounds, afterScreenUpdates: true)
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main().scale)
+    drawHierarchy(in: self.bounds, afterScreenUpdates: true)
     
     let image = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsEndImageContext()
     
-    return image
+    return image!
   }
 }

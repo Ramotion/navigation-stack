@@ -56,11 +56,11 @@ class CollectionViewStackFlowLayout: UICollectionViewFlowLayout {
 
 extension CollectionViewStackFlowLayout {
   
-  override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-    let items = NSArray (array: super.layoutAttributesForElementsInRect(rect)!, copyItems: true)
+  override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    let items = NSArray (array: super.layoutAttributesForElements(in: rect)!, copyItems: true)
     var headerAttributes: UICollectionViewLayoutAttributes?
     
-    items.enumerateObjectsUsingBlock { (object, idex, stop) -> Void in
+    items.enumerateObjects({ (object, idex, stop) -> Void in
       let attributes = object as! UICollectionViewLayoutAttributes
       
       if attributes.representedElementKind == UICollectionElementKindSectionHeader {
@@ -69,11 +69,11 @@ extension CollectionViewStackFlowLayout {
       else {
         self.updateCellAttributes(attributes, headerAttributes: headerAttributes)
       }
-    }
+    })
     return items as? [UICollectionViewLayoutAttributes]
   }
   
-  func updateCellAttributes(attributes: UICollectionViewLayoutAttributes, headerAttributes: UICollectionViewLayoutAttributes?) {
+  func updateCellAttributes(_ attributes: UICollectionViewLayoutAttributes, headerAttributes: UICollectionViewLayoutAttributes?) {
     
     guard let collectionView = self.collectionView else {
       return;
@@ -86,7 +86,7 @@ extension CollectionViewStackFlowLayout {
     
     let scale = transformScale(attributes, allWidth: allWidth, offset: contentOffsetX)
     let move  = transformMove(attributes, itemWidth: itemWidth, offset: contentOffsetX)
-    attributes.transform = CGAffineTransformConcat(scale, move)
+    attributes.transform = scale.concat(move)
     attributes.alpha = calculateAlpha(attributes, itemWidth: itemWidth, offset: contentOffsetX)
 
     if additionScale > 0 && openAnimating {
@@ -96,7 +96,7 @@ extension CollectionViewStackFlowLayout {
     attributes.zIndex    = attributes.indexPath.row
   }
   
-  override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+  override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
     return true
   }
 }
@@ -105,7 +105,7 @@ extension CollectionViewStackFlowLayout {
 
 extension CollectionViewStackFlowLayout {
 
-  private func transformScale(attributes: UICollectionViewLayoutAttributes,
+  private func transformScale(_ attributes: UICollectionViewLayoutAttributes,
     allWidth: CGFloat,
     offset: CGFloat) -> CGAffineTransform {
       var maximum = CGFloat(maxScale) - CGFloat(itemsCount - attributes.indexPath.row) / CGFloat(scaleRatio)
@@ -116,10 +116,10 @@ extension CollectionViewStackFlowLayout {
       
       var currentScale = (maximum + minimum) - (minimum + offset / (allWidth / (maximum - minimum)))
       currentScale = max(min(maximum, currentScale), minimum)
-      return CGAffineTransformMakeScale(currentScale, currentScale)
+      return CGAffineTransform(scaleX: currentScale, y: currentScale)
   }
   
-  private func transformMove(attributes: UICollectionViewLayoutAttributes,
+  private func transformMove(_ attributes: UICollectionViewLayoutAttributes,
     itemWidth: CGFloat,
     offset: CGFloat) -> CGAffineTransform {
       var currentContentOffsetX = offset - itemWidth * CGFloat(attributes.indexPath.row)
@@ -131,10 +131,10 @@ extension CollectionViewStackFlowLayout {
       }
       dx = currentContentOffsetX - dx
 
-      return CGAffineTransformMakeTranslation(dx, 0)
+      return CGAffineTransform(translationX: dx, y: 0)
   }
   
-  private func calculateAlpha(attributes: UICollectionViewLayoutAttributes, itemWidth: CGFloat, offset: CGFloat) -> CGFloat {
+  private func calculateAlpha(_ attributes: UICollectionViewLayoutAttributes, itemWidth: CGFloat, offset: CGFloat) -> CGFloat {
     var currentContentOffsetX = offset - itemWidth * CGFloat(attributes.indexPath.row)
     currentContentOffsetX = min(max(currentContentOffsetX, 0),itemWidth)
     

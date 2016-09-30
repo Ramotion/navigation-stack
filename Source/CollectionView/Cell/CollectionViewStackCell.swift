@@ -50,7 +50,7 @@ class CollectionViewStackCell: UICollectionViewCell {
 
 extension CollectionViewStackCell {
 
-  private func createImageView() -> UIImageView {
+  fileprivate func createImageView() -> UIImageView {
 
     let imageView = UIImageView(frame: CGRect.zero)
     imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -67,7 +67,7 @@ extension CollectionViewStackCell {
     return imageView
   }
   
-  private func createConstraint(_ item: UIImageView, toItem: UIView, attribute: NSLayoutAttribute) -> NSLayoutConstraint {
+  fileprivate func createConstraint(_ item: UIImageView, toItem: UIView, attribute: NSLayoutAttribute) -> NSLayoutConstraint {
    return NSLayoutConstraint(item: item,
                         attribute: attribute,
                         relatedBy: .equal,
@@ -77,7 +77,7 @@ extension CollectionViewStackCell {
                          constant: 0)
   }
   
-  private func createShadow() {
+  fileprivate func createShadow() {
     layer.masksToBounds = false;
     layer.shadowOpacity = 0.30;
     layer.shadowRadius = 10.0;
@@ -86,7 +86,7 @@ extension CollectionViewStackCell {
     layer.shouldRasterize = true;
   }
   
-  private func addBlurOnImage(_ image: UIImageView) {
+  fileprivate func addBlurOnImage(_ image: UIImageView) {
     
     let blurEffect = UIBlurEffect(style: .dark)
     let blurView = UIVisualEffectView(effect: blurEffect)

@@ -22,7 +22,7 @@ class SecondViewController: UITableViewController {
 
 
   @IBAction func backHandler(_ sender: AnyObject) {
-    _ = navigationController?.popViewController(animated: true)
+    let _ = navigationController?.popViewController(animated: true)
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

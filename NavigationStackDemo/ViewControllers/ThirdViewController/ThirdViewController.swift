@@ -10,7 +10,7 @@ import UIKit
 
 class ThirdViewController: UITableViewController {
   
-  @IBInspectable var navbarColor: UIColor = .black()
+  @IBInspectable var navbarColor: UIColor = .black
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -18,7 +18,7 @@ class ThirdViewController: UITableViewController {
   }
   
   @IBAction func backHandler(_ sender: AnyObject) {
-    _ = navigationController?.popViewController(animated: true)
+    let _ = navigationController?.popViewController(animated: true)
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -24,17 +24,28 @@
 
 
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
 
 // MARK: CollectionStackViewController
 
 protocol CollectionStackViewControllerDelegate: class {
-  func controllerDidSelected(_ index: Int)
+  func controllerDidSelected(index: Int)
 }
 
 
 class CollectionStackViewController: UICollectionViewController {
-  private var screens: [UIImage]
-  private let overlay: Float
+  fileprivate var screens: [UIImage]
+  fileprivate let overlay: Float
   
   weak var delegate: CollectionStackViewControllerDelegate?
   
@@ -43,7 +54,7 @@ class CollectionStackViewController: UICollectionViewController {
     overlay: Float,
     scaleRatio: Float,
     scaleValue: Float,
-    bgColor: UIColor = UIColor.clear(),
+    bgColor: UIColor = UIColor.clear,
     bgView: UIView? = nil,
     decelerationRate:CGFloat) {
       
@@ -85,14 +96,14 @@ class CollectionStackViewController: UICollectionViewController {
 
 extension CollectionStackViewController {
   
-  private func configureCollectionView() {
+  fileprivate func configureCollectionView() {
     guard let collectionViewLayout = self.collectionViewLayout as? UICollectionViewFlowLayout else {
       fatalError("wrong collection layout")
     }
     
     collectionViewLayout.scrollDirection = .horizontal
     collectionView?.showsHorizontalScrollIndicator = false
-    collectionView?.register(CollectionViewStackCell.self, forCellWithReuseIdentifier: String(CollectionViewStackCell.self))
+    collectionView?.register(CollectionViewStackCell.self, forCellWithReuseIdentifier: String(describing: CollectionViewStackCell.self))
   }
 
 }
@@ -115,7 +126,7 @@ extension CollectionStackViewController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(CollectionViewStackCell.self),
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CollectionViewStackCell.self),
                               for: indexPath)
     return cell
   }
@@ -128,7 +139,7 @@ extension CollectionStackViewController {
     // move cells
     UIView.animate(withDuration: 0.3, delay: 0, options:.curveEaseIn,
     animations: { () -> Void in
-      for  cell in self.collectionView!.visibleCells() where cell != currentCell {
+      for  cell in self.collectionView!.visibleCells where cell != currentCell {
         let row = (self.collectionView?.indexPath(for: cell) as NSIndexPath?)?.row
         let xPosition = row < (indexPath as NSIndexPath).row ? cell.center.x - self.view.bounds.size.width * 2
                                             : cell.center.x + self.view.bounds.size.width * 2
@@ -152,7 +163,7 @@ extension CollectionStackViewController {
       
     }) { (success) -> Void in
       DispatchQueue.main.async(execute: { () -> Void in
-        self.delegate?.controllerDidSelected((indexPath as NSIndexPath).row)
+        self.delegate?.controllerDidSelected(index: (indexPath as NSIndexPath).row)
         self.dismiss(animated: false, completion: nil)
       })
     }
@@ -177,7 +188,7 @@ extension CollectionStackViewController: UICollectionViewDelegateFlowLayout {
 
 extension CollectionStackViewController {
   
-  private func scrolltoIndex(_ index: Int, animated: Bool , position: UICollectionViewScrollPosition) {
+  fileprivate func scrolltoIndex(_ index: Int, animated: Bool , position: UICollectionViewScrollPosition) {
     let indexPath = IndexPath(item: index, section: 0)
     collectionView?.scrollToItem(at: indexPath, at: position, animated: animated)
   }

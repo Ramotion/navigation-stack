@@ -30,12 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
 
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
-    UIApplication.shared().statusBarStyle = .lightContent
+    UIApplication.shared.statusBarStyle = .lightContent
     
     UINavigationBar.appearance().titleTextAttributes = [
-      NSForegroundColorAttributeName : UIColor.white(),
+      NSForegroundColorAttributeName : UIColor.white,
       NSFontAttributeName : UIFont(name: "OpenSans-Semibold", size: 16)!
     ]
     

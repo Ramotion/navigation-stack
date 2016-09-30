@@ -86,14 +86,14 @@ extension CollectionViewStackFlowLayout {
     
     let scale = transformScale(attributes, allWidth: allWidth, offset: contentOffsetX)
     let move  = transformMove(attributes, itemWidth: itemWidth, offset: contentOffsetX)
-    attributes.transform = scale.concat(move)
+    attributes.transform = scale.concatenating(move)
     attributes.alpha = calculateAlpha(attributes, itemWidth: itemWidth, offset: contentOffsetX)
 
     if additionScale > 0 && openAnimating {
       additionScale -= 0.02
       additionScale = additionScale < 0 ? 0 : additionScale
     }
-    attributes.zIndex    = attributes.indexPath.row
+    attributes.zIndex    = (attributes.indexPath as NSIndexPath).row
   }
   
   override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
@@ -105,13 +105,13 @@ extension CollectionViewStackFlowLayout {
 
 extension CollectionViewStackFlowLayout {
 
-  private func transformScale(_ attributes: UICollectionViewLayoutAttributes,
+  fileprivate func transformScale(_ attributes: UICollectionViewLayoutAttributes,
     allWidth: CGFloat,
     offset: CGFloat) -> CGAffineTransform {
-      var maximum = CGFloat(maxScale) - CGFloat(itemsCount - attributes.indexPath.row) / CGFloat(scaleRatio)
+      var maximum = CGFloat(maxScale) - CGFloat(itemsCount - (attributes.indexPath as NSIndexPath).row) / CGFloat(scaleRatio)
       maximum += CGFloat(1.0 - maximum) * CGFloat(additionScale)
       
-      var minimum = CGFloat(maxScale - 0.1) - CGFloat(itemsCount - attributes.indexPath.row) / CGFloat(scaleRatio)
+      var minimum = CGFloat(maxScale - 0.1) - CGFloat(itemsCount - (attributes.indexPath as NSIndexPath).row) / CGFloat(scaleRatio)
       minimum += CGFloat(1.0 - minimum) * CGFloat(additionScale)
       
       var currentScale = (maximum + minimum) - (minimum + offset / (allWidth / (maximum - minimum)))
@@ -119,10 +119,10 @@ extension CollectionViewStackFlowLayout {
       return CGAffineTransform(scaleX: currentScale, y: currentScale)
   }
   
-  private func transformMove(_ attributes: UICollectionViewLayoutAttributes,
+  fileprivate func transformMove(_ attributes: UICollectionViewLayoutAttributes,
     itemWidth: CGFloat,
     offset: CGFloat) -> CGAffineTransform {
-      var currentContentOffsetX = offset - itemWidth * CGFloat(attributes.indexPath.row)
+      var currentContentOffsetX = offset - itemWidth * CGFloat((attributes.indexPath as NSIndexPath).row)
       currentContentOffsetX = min(max(currentContentOffsetX, 0),itemWidth)
       
       var dx = (currentContentOffsetX / itemWidth)
@@ -134,8 +134,8 @@ extension CollectionViewStackFlowLayout {
       return CGAffineTransform(translationX: dx, y: 0)
   }
   
-  private func calculateAlpha(_ attributes: UICollectionViewLayoutAttributes, itemWidth: CGFloat, offset: CGFloat) -> CGFloat {
-    var currentContentOffsetX = offset - itemWidth * CGFloat(attributes.indexPath.row)
+  fileprivate func calculateAlpha(_ attributes: UICollectionViewLayoutAttributes, itemWidth: CGFloat, offset: CGFloat) -> CGFloat {
+    var currentContentOffsetX = offset - itemWidth * CGFloat((attributes.indexPath as NSIndexPath).row)
     currentContentOffsetX = min(max(currentContentOffsetX, 0),itemWidth)
     
     let dx = (currentContentOffsetX / itemWidth)

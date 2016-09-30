@@ -26,24 +26,24 @@
 import UIKit
 
 /// UINavigationcontroller with animation show lists of UIViewControllers
-public class NavigationStack: UINavigationController {
+open class NavigationStack: UINavigationController {
   
   var overlay: Float = 0.8
   var scaleRatio: Float = 14.0
   var scaleValue: Float = 0.99
   
   /// A floating-point value that determines the rate of deceleration after the user lifts their finger.
-  @IBInspectable public var decelerationRate: CGFloat = UIScrollViewDecelerationRateNormal
+  @IBInspectable open var decelerationRate: CGFloat = UIScrollViewDecelerationRateNormal
   
   /// The color to use for the background of the lists of UIViewcontrollers.
-  @IBInspectable public var bgColor: UIColor = .black()
+  @IBInspectable open var bgColor: UIColor = .black
   
   /// The background UIView of the lists of UIViewcontrollers.
-  public var bgView: UIView? = nil
-  private var screens = [UIImage]()
+  open var bgView: UIView? = nil
+  fileprivate var screens = [UIImage]()
   
   /// The delegate of the navigation controller object. Use this instead delegate.
-  weak public var stackDelegate: UINavigationControllerDelegate?
+  weak open var stackDelegate: UINavigationControllerDelegate?
   
   /**
    The initialized navigation controller object or nil if there was a problem initializing the object.
@@ -142,7 +142,7 @@ extension NavigationStack: UINavigationControllerDelegate {
 }
 
 extension NavigationStack: CollectionStackViewControllerDelegate {
-  func controllerDidSelected(_ index: Int) {
+  func controllerDidSelected(index: Int) {
     
     let newViewControllers = Array(viewControllers[0...index])
     setViewControllers(newViewControllers, animated: false)
@@ -156,7 +156,7 @@ extension UIView {
   
   func takeScreenshot() -> UIImage {
     
-    UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main().scale)
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
     drawHierarchy(in: self.bounds, afterScreenUpdates: true)
     
     let image = UIGraphicsGetImageFromCurrentImageContext()

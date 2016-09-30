@@ -12,7 +12,7 @@
 ## About
 This project is maintained by Ramotion, an agency specialized in building dedicated engineering teams and developing custom software.<br><br> [Contact our team](https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=navigation-stack-contact-us) and we’ll help you work with the best engineers from Eastern Europe.
 
-[![Animation](https://raw.githubusercontent.com/Ramotion/navigation-stack/master/Navigation-Stack.gif)](https://dribbble.com/shots/2583175-Navigation-Stack-Swift-Open-Source)
+![Animation](https://raw.githubusercontent.com/Ramotion/navigation-stack/master/Navigation-Stack.gif)
 
 The [iPhone mockup](https://store.ramotion.com/product/iphone-6-mockups?utm_source=gthb&utm_medium=special&utm_campaign=navigation-stack) available [here](https://store.ramotion.com/product/iphone-6-mockups?utm_source=gthb&utm_medium=special&utm_campaign=navigation-stack).
 

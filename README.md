@@ -32,7 +32,9 @@ pod 'Navigation-stack'
 
 or [Carthage](https://github.com/Carthage/Carthage) users can simply add to their `Cartfile`:
 ```
-github "Ramotion/navigation-stack"
+github "Ramotion/navigation-stack", "~> 0.0.8" swift 2
+
+github "Ramotion/navigation-stack", "~> 1.0.0" swift 3
 ```
 
 ## Usage

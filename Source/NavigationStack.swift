@@ -70,6 +70,13 @@ open class NavigationStack: UINavigationController {
     
     delegate = self
   }
+    
+  /**
+   Necessary to prevent a crash
+   */
+  public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+  }
 }
 
 // MARK: pulbic methods

@@ -65,7 +65,7 @@ open class NavigationStack: UINavigationController {
    
    - returns: The initialized navigation controller object or nil if there was a problem initializing the object.
    */
-  override init(rootViewController: UIViewController) {
+  public override init(rootViewController: UIViewController) {
     super.init(rootViewController: rootViewController)
     
     delegate = self

@@ -17,7 +17,7 @@ We specialize in the designing and coding of custom UI for Mobile Apps and Websi
 
 The [iPhone mockup](https://store.ramotion.com/product/iphone-6-mockups?utm_source=gthb&utm_medium=special&utm_campaign=navigation-stack) available [here](https://store.ramotion.com/product/iphone-6-mockups?utm_source=gthb&utm_medium=special&utm_campaign=navigation-stack).
 
-[![get on iTunes](https://github.com/Ramotion/navigation-stack/raw/master/Get_it_on_iTunes_Badge_US_1114.png)](https://itunes.apple.com/app/apple-store/id1182360240?pt=550053&ct=gthb-navigation-stack&mt=8)
+[![get on iTunes](https://github.com/Ramotion/navigation-stack/raw/master/Get_it_on_iTunes_Badge_US_11142.png)](https://itunes.apple.com/app/apple-store/id1182360240?pt=550053&ct=gthb-navigation-stack&mt=8)
 
 ## Requirements
 

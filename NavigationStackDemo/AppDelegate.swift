@@ -35,8 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UIApplication.shared.statusBarStyle = .lightContent
     
     UINavigationBar.appearance().titleTextAttributes = [
-      NSForegroundColorAttributeName : UIColor.white,
-      NSFontAttributeName : UIFont(name: "OpenSans-Semibold", size: 16)!
+      NSAttributedStringKey.foregroundColor : UIColor.white,
+      NSAttributedStringKey.font : UIFont(name: "OpenSans-Semibold", size: 16)!
     ]
     
     return true

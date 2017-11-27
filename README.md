@@ -29,7 +29,7 @@ The [iPhone mockup](https://store.ramotion.com?utm_source=gthb&utm_medium=specia
 ## Requirements
 
 - iOS 9.0+
-- Xcode 8
+- Xcode 9
 
 ## Installation
 
@@ -37,7 +37,7 @@ Just add the Source folder to your project.
 
 or use [CocoaPods](https://cocoapods.org) with Podfile:
 ``` ruby
-pod 'Navigation-stack' 
+pod 'Navigation-stack'
 ```
 
 or [Carthage](https://github.com/Carthage/Carthage) users can simply add to their `Cartfile`:

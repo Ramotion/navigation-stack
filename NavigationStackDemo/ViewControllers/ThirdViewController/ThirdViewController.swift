@@ -9,20 +9,18 @@
 import UIKit
 
 class ThirdViewController: UITableViewController {
-  
-  @IBInspectable var navbarColor: UIColor = .black
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    
-  }
-  
-  @IBAction func backHandler(_ sender: AnyObject) {
-    let _ = navigationController?.popViewController(animated: true)
-  }
-  
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    performSegue(withIdentifier: "push", sender: nil)
-  }
-  
+
+    @IBInspectable var navbarColor: UIColor = .black
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+
+    @IBAction func backHandler(_: AnyObject) {
+        _ = navigationController?.popViewController(animated: true)
+    }
+
+    override func tableView(_: UITableView, didSelectRowAt _: IndexPath) {
+        performSegue(withIdentifier: "push", sender: nil)
+    }
 }

@@ -60,7 +60,7 @@
 		84368B3C1CFEDDB1007C4278 /* NavigationStack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NavigationStack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84368B3E1CFEDDB1007C4278 /* NavigationStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationStack.h; sourceTree = "<group>"; };
 		84368B401CFEDDB1007C4278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8444B0EC1C80238500B53B4E /* NavigationStackDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationStackDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8444B0EC1C80238500B53B4E /* Navigation Stack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Navigation Stack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8444B0EF1C80238500B53B4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8444B0F41C80238500B53B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8444B0F61C80238500B53B4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		8444B0ED1C80238500B53B4E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8444B0EC1C80238500B53B4E /* NavigationStackDemo.app */,
+				8444B0EC1C80238500B53B4E /* Navigation Stack.app */,
 				84368B3C1CFEDDB1007C4278 /* NavigationStack.framework */,
 			);
 			name = Products;
@@ -276,7 +276,7 @@
 			);
 			name = NavigationStackDemo;
 			productName = NavigationStackDemo;
-			productReference = 8444B0EC1C80238500B53B4E /* NavigationStackDemo.app */;
+			productReference = 8444B0EC1C80238500B53B4E /* Navigation Stack.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -561,7 +561,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ramotion.NavigationStackDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Navigation Stack";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -577,7 +577,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ramotion.NavigationStackDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Navigation Stack";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};

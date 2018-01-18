@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'Navigation-stack'
-  s.version      = '2.0.1'
+  s.version      = '2.0.2'
   s.summary      = 'Show list of navigationControllers'
   s.license      = 'MIT'
   s.homepage     = 'https://github.com/Ramotion/navigation-stack'

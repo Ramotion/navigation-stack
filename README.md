@@ -1,5 +1,6 @@
 [![header](./header.png)](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=navigation-stack-logo)
-![Animation](./Navigation-Stack.gif)
+<img src="https://github.com/Ramotion/navigation-stack/blob/master/navigation-stack.gif" width="600" height="450" />
+<br><br/>
 # navigation-stack
 [![Twitter](https://img.shields.io/badge/Twitter-@Ramotion-blue.svg?style=flat)](http://twitter.com/Ramotion)
 [![CocoaPods](https://img.shields.io/cocoapods/p/Navigation-stack.svg)](https://cocoapods.org/pods/Navigation-stack)

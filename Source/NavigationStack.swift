@@ -32,7 +32,7 @@ open class NavigationStack: UINavigationController {
     var scaleValue: Float = 0.99
 
     /// A floating-point value that determines the rate of deceleration after the user lifts their finger.
-    @IBInspectable open var decelerationRate: CGFloat = UIScrollViewDecelerationRateNormal
+    @IBInspectable open var decelerationRate: CGFloat = UIScrollView.DecelerationRate.normal.rawValue
 
     /// The color to use for the background of the lists of UIViewcontrollers.
     @IBInspectable open var bgColor: UIColor = .black
@@ -140,7 +140,7 @@ extension NavigationStack: UINavigationControllerDelegate {
         return stackDelegate?.navigationController?(navigationController, interactionControllerFor: animationController)
     }
 
-    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return stackDelegate?.navigationController?(navigationController, animationControllerFor: operation, from: fromVC, to: toVC)
     }
 }
